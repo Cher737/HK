@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+
+table {
+	width: 500px;
+	border: none;
+	position: fixed;
+	top: 150px;
+	left: 550px;
+}
+img{
+	width: 72px;
+	height: 72px;
+}
+.i{
+	border: black solid 2px;
+	width: 85%; /* 이것이 소속된것 (부모)-> <td> 대비 xx% 인것.(td 정확히 사이즈 주고가는거면 퍼센트 먹이기 좋음) */
+	height: 40px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 12pt;
+	padding-left: 10px;
+	font-weight: 500;
+}
+.i::placeholder{ /* (플레이스홀더는 :: 콜론 두개써야함) */
+	font-size: 12pt;
+	font-weight: 500;
+	padding-left: 5px;
+}
+.td3{
+	font-size: 13pt;
+	font-weight: 800;
+}
+
+
+/* 이하 버튼 css */
+html,body{
+	height:100%;
+}
+body{
+	text-align:center;
+}
+body:before{
+	height:100%;
+	display:inline-block;
+	vertical-align:middle;
+}
+#loginbutton{
+	background:#2979FF;
+	color:#fff;
+	border:none;
+	position:relative;
+	height:60px;
+	font-size:1.6em;
+	font-weight: 600;
+	padding:0 2em;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+}
+#loginbutton:hover{
+	background:#fff;
+	color:#2979FF;
+}
+#loginbutton:before,#loginbutton:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: #2979FF;
+	transition:400ms ease all;
+}
+#loginbutton:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+}
+#loginbutton:hover:before,#loginbutton:hover:after{
+	width:100%;
+	transition:800ms ease all;
+}
