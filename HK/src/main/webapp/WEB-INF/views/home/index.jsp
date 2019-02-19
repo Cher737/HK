@@ -14,8 +14,8 @@
 </table></td>
 
 <td><table>
-<tr><td id="titlesearchtd">
-<input id="titlesearch" > <img src="resources/img/search.png"></td>
+<tr><td id="titlesearchtd" valign="baseline">
+<input id="titlesearch"  > <img src="resources/img/search.png" ></td>
 </tr>
 </table>
 <td id="titlesubtd">호호후후호히헤헤</td>
