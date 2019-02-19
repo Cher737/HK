@@ -9,9 +9,15 @@
 </head>
 <body>
 <table>
-<tr><td id="titlelogotd"><img src="resources/img/HK.jpg"></td>
+<tr><td id="titlelogotd"><table>
+<tr><td><img src="resources/img/HK.jpg"></td></tr>
+</table></td>
 
-<td id="titlesearchtd" valign="top"><input id="titlesearch"></td>
+<td><table>
+<tr><td id="titlesearchtd">
+<input id="titlesearch" > <img src="resources/img/search.png"></td>
+</tr>
+</table>
 <td id="titlesubtd">호호후후호히헤헤</td>
 </tr>
 </table>

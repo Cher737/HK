@@ -17,13 +17,21 @@ body{
 	padding: 15px;
 }
 #titlesearchtd{
+	width: 500px;
 	margin: 0px;
 	height: 30px;
 	padding: 20px;
+	border: black solid 2px;
+	border-radius: 30px;
 }
 #titlesearch{
-	width: 500px;
+	width: 450px;
 	height: 40px;
-	border: black solid 2px;
-	border-radius: 30px;	
+	border: none;
+		
+}
+
+#titlesearchtd img{
+	width: 30px;
+	height: 30px;
 }
