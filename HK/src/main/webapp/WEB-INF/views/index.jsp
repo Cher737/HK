@@ -12,7 +12,7 @@
 <tr><td id="titlelogotd"><img src="resources/img/HK.jpg"></td>
 
 <td id="titlesearchtd" valign="top"><input id="titlesearch"></td>
-<td id="titlesubtd">zz</td>
+<td id="titlesubtd">호호후후호히헤헤</td>
 </tr>
 </table>
 </body>
