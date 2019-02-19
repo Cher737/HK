@@ -7,9 +7,13 @@ body{
 	
 	
 }
-
+#bodytable{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
 #titlelogotd{
-	width: 100px;
+	width: 170px;
 }
 #titlelogotd img{
 	width: 70px;
@@ -29,10 +33,54 @@ body{
 	margin-left: 30px;
 	font-size: 15pt;
 	font-weight: 700;
-	padding-bottom: 10px;
 }
 
-#titlesearchtd img{
+#titlesearchimg{
 	width: 25px;
 	height: 25px;
+	padding-bottom: 0px;
+}
+#titlecarttd{
+	width:45%;
+}
+#titlemypagetd{
+	width:15%;
+	padding-right: 70px;
+}
+#titlecarttd img{
+	
+	width: 40px;
+	height: 40px;
+}
+
+#titlemypagetd img{
+	width: 40px;
+	height: 40px;
+}
+#categorytable{
+	width: 200px;
+	height: 100%;
+}
+#categorys{
+	
+	height: 100%;
+	padding-bottom: 20px;
+	
+}
+.menu1{
+	width: 200px;
+	font-size: 12pt;
+	font-weight: 600;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#category{
+	width: 150px;
+	font-size: 20pt;
+	font-weight: 800;
+	border-bottom: silver double 6px;
+}
+#centerpage{
+	width: 500%;
 }
