@@ -18,7 +18,6 @@ $(function(){
 		location.href = "Support.FAQ";
 	});
 });
-
 </script>
 </head>
 <body>
