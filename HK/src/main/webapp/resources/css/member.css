@@ -1,0 +1,160 @@
+@CHARSET "UTF-8";
+
+#logintable{
+	width: 500px;
+	border: none;
+	margin: 150px auto 0;
+}
+#jointable1{
+	width: 500px;
+	border: none;
+	top: 100px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#jointable2{
+	width: 500px;
+	border: none;
+	top: 450px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#jointable3{
+	width: 500px;
+	border: none;
+	top: 850px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#jointable4{
+	width: 500px;
+	border: none;
+	top: 1050px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#loginimg,#joinimg{
+	width: 72px;
+	height: 72px;
+}
+.logininput,.joininput{
+	border: #2979FF solid 2px;
+	width: 85%; /* 이것이 소속된것 (부모)-> <td> 대비 xx% 인것.(td 정확히 사이즈 주고가는거면 퍼센트 먹이기 좋음) */
+	height: 40px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 12pt;
+	padding-left: 10px;
+	font-weight: 500;
+}
+.joininput2{
+	border: #2979FF solid 2px;
+	width: 65%;
+	height: 40px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 12pt;
+	padding-left: 10px;
+	font-weight: 500;
+}
+.joinAddrNoinput {
+	border: #2979FF solid 2px;
+	width: 73%;
+	height: 40px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 12pt;
+	padding-left: 10px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+#joinAddrSearchBtn,#joinidok {
+	height: 30px;
+	font-size: 12pt;
+	font-weight: 500;
+	border: none;
+	color: white;
+	cursor: pointer;
+	background-color: #2979FF;
+	padding: 7px;
+	border-radius: 5px;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.logininput::placeholder,.joininput::placeholder{ /* (플레이스홀더는 :: 콜론 두개써야함) */
+	font-size: 12pt;
+	font-weight: 500;
+	border-radius: 10px;
+}
+.logintd1{
+	font-size: 13pt;
+	font-weight: 800;
+}
+.jointr1{
+	width: 450px;
+}
+.jointd1{
+	border: #2979FF solid 2px;
+	height: 40px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 13pt;
+	padding-left: 10px;
+	font-weight: 800;
+}
+/* 
+이하 로그인, 회원가입화면 버튼 css 
+#loginhtml,#loginbody,#joinhtml,#joinbody{
+	height:100%;
+}
+*/
+#loginbody,#joinbody{
+	text-align:center;
+}
+#loginbody:before,#joinbody:before{
+	height:100%;
+	display:inline-block;
+	vertical-align:middle;
+}
+#loginbutton,#joinbutton,#gobackbutton{
+	background:#2979FF;
+	color:#fff;
+	border:none;
+	position:relative;
+	height:60px;
+	font-size:1.6em;
+	font-weight: 600;
+	padding:0 2em;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+}
+#loginbutton:hover,#joinbutton:hover{
+	background:#fff;
+	color:#2979FF;
+}
+#loginbutton:before,#loginbutton:after,#joinbutton:before,#joinbutton:after,#gobackbutton:before,#gobackbutton:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: #2979FF;
+	transition:400ms ease all;
+}
+#loginbutton:after,#joinbutton:after,#gobackbutton:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+}
+#loginbutton:hover:before,#loginbutton:hover:after, #joinbutton:hover:before,#joinbutton:hover:after{
+	width:100%;
+	transition:800ms ease all;
+}
