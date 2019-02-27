@@ -49,4 +49,26 @@ public class HomeController {
 		request.setAttribute("Mypage", "Coupon.jsp");
 		return "index";
 	}
+	
+	@RequestMapping(value = "/login.go", method = RequestMethod.GET)
+	public String login2() {		
+		return "member/login";
+	}
+	
+	@RequestMapping(value = "/join.go", method = RequestMethod.GET)
+	public String join() {		
+		return "member/join";
+	}
+	
+	@RequestMapping(value = "/product", method = RequestMethod.GET)
+	public String product(HttpServletRequest request) {
+		request.setAttribute("centerpage", "product/product.jsp");
+		return "index";
+	}
+	
+	@RequestMapping(value = "/product.detail", method = RequestMethod.GET)
+	public String product2(HttpServletRequest request) {
+		request.setAttribute("centerpage", "product/productdetail.jsp");
+		return "index";
+	}
 }
