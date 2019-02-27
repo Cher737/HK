@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+
+#MypagemainTable{
+	margin-right: 150px;
+	width: 800px;
+	border: #A1887F solid 1px;
+	height: 150px;
+	border-collapse: collapse;
+	background-color: #EFEBE9;
+}
+img{
+	width: 50px;
+}
+#MypageNametd{
+	width: 300px;
+	text-align: center;	
+	border-bottom: #D7CCC8 solid 1px;
+	border-right: #D7CCC8 solid 1px;
+}
+
+#Namespan1{
+font-size: 20pt;
+font-weight: 700;	
+}
+#Namespan2{
+font-size: 15pt;
+font-weight: 700;	
+color: #757575;
+padding-left: 10px;
+}
+#MypageGradetd{
+	border-right: #D7CCC8 solid 1px;
+	width: 300px;
+	text-align: center;	
+}
+
+
+#MypagePointtd{
+	width: 250px;
+	padding-left: 70px;
+	padding-right: 70px;
+	border-bottom: #D7CCC8 solid 1px;
+	color: #757575;
+	
+}
+MypagePointtd img{
+	width: 50px;
+}
+#MypageCoupontd{
+	width: 250px;
+	padding-left: 70px;
+	padding-right: 70px;
+	border-right: #D7CCC8 solid 1px;
+	color: #757575;
+	
+}
