@@ -31,8 +31,8 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<button id="Supportgo" class="centerlastbox"> 고객센터</button>
-				<button class="centerlastbox">지점안내</button>
+				<div id="Supportgo" class="centerlastbox"><img src="resources/img/operator.png"><br>고객센터</div>
+				<div class="centerlastbox"><img src="resources/img/placeholder.png"><br>지점안내</div>
 			</td>
 		</tr>
 
