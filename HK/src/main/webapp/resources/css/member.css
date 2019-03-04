@@ -41,26 +41,40 @@
 	width: 72px;
 	height: 72px;
 }
-.logininput,.joininput{
+.logininput,.joininput,.joininput2,.joininput3,.emailselect{
 	border: #2979FF solid 2px;
+	background-color: transparent;
+	border-radius: 10px;
+	font-size: 12pt;
+	padding-left: 10px;
+	font-weight: 500;
+	outline: none;
+}
+.logininput,.joininput{
 	width: 85%; /* 이것이 소속된것 (부모)-> <td> 대비 xx% 인것.(td 정확히 사이즈 주고가는거면 퍼센트 먹이기 좋음) */
 	height: 40px;
-	background-color: transparent;
-	border-radius: 10px;
-	font-size: 12pt;
-	padding-left: 10px;
-	font-weight: 500;
 }
 .joininput2{
-	border: #2979FF solid 2px;
-	width: 65%;
+	width: 67%;
 	height: 40px;
-	background-color: transparent;
-	border-radius: 10px;
-	font-size: 12pt;
-	padding-left: 10px;
-	font-weight: 500;
 }
+.joininput3{
+	width: 24.5%;
+	height: 40px;
+}
+.joininput4{
+	width: 20%;
+	height: 40px;
+}
+.emailselect{
+	width: 25%;
+	height: 46px;
+}
+.jointable2td{
+	font-size: 15pt;
+	font-weight: 900;
+}
+
 .joinAddrNoinput {
 	border: #2979FF solid 2px;
 	width: 73%;
@@ -93,18 +107,6 @@
 }
 .logintd1{
 	font-size: 13pt;
-	font-weight: 800;
-}
-.jointr1{
-	width: 450px;
-}
-.jointd1{
-	border: #2979FF solid 2px;
-	height: 40px;
-	background-color: transparent;
-	border-radius: 10px;
-	font-size: 13pt;
-	padding-left: 10px;
 	font-weight: 800;
 }
 /* 
@@ -157,4 +159,74 @@
 #loginbutton:hover:before,#loginbutton:hover:after, #joinbutton:hover:before,#joinbutton:hover:after{
 	width:100%;
 	transition:800ms ease all;
+}
+
+/*	이하 회원정보보기 페이지	*/
+
+#memberinfotable{
+	border-spacing: 0px;
+	width: 1000px;
+	height: 500px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 13pt;
+	font-weight: 500;
+}
+.memberinput1,.memberinput2{
+	margin-left: 20px;
+	width: 450px;
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+}
+.memberinput1::placeholder,.memberinput2::placeholder{
+	font-size: 12pt;
+	font-weight: 500;
+}
+.memberinput2{
+	border: none;
+}
+.infotitle{
+	padding-left:15px;
+	font-size: 25pt;
+	font-weight: 800;
+}
+.infosubtitletr{
+	border-top: black solid 2px;
+}
+.infosubtitle1,.infosubtitle2{
+	border-bottom: #E0E0E0 solid 2px;
+	font-size: 15pt;
+	font-weight: 800;
+	padding-left: 20px;
+}
+.infosubtitle1{
+	background-color: #E3F2FD55;
+}
+/* 이하 회원탈퇴, 회원정보변경버튼 */
+.byeBtn,.updateBtn{
+	font-size:18pt;
+	font-weight: 600;
+	cursor:pointer;
+	outline:none;
+	height: 60px;
+}
+.byeBtn{
+	border: red solid 2px;
+	color: red;
+	background:#fff;
+	width: 230px;
+}
+.updateBtn{
+	border:none;
+	background: red;
+	color:#fff;
+	width: 230px;
+}
+.updateBtn:hover{
+	border: red solid 2px;
+	background:#fff;
+	color: red;
+	width: 230px;
 }
