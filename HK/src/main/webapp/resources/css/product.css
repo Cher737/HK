@@ -10,26 +10,56 @@
 }
 #selecttable{
 	top: 30px;
+	height: 220px;
+	font-size: 13pt;
+	font-weight: 500;
 }
 .categorytd1{
-	width: 20%;
+	width: 200px;
 	font-size:12pt;
 	font-weight:800;
 }
 .categorytd2{
-	width: 20%;
+	width: 200px;
 	font-size:12pt;
 	font-weight:800;
+}
+.categoryone,.categorytwo{
+	text-align-last:center; /* option 내 글자 가운데 정렬 */
+}
+.categoryone{
+	width: 150px;
+}
+.categorytwo{
+	width: 100px;
 }
 .categorytitle{
 	font-size: 35pt;
 	font-weight: 800;
+	width: 200px;
 }
 .categorysearch1{
-	width: 37%;
+	width: 335px;
 }
 .categorysearch2{
-	width: 3%;
+	width: 55px;
+}
+.categorysearchbtn{
+	border:none;
+	background:#2979FF;
+	color:#fff;
+	outline: none;
+	font-size:12pt;
+	font-weight: 600;
+	cursor:pointer;
+	width:53px;
+	height: 30px;
+	padding-bottom: 5px;
+}
+.categorysearchbtn:hover{
+	background:#fff;
+	color:#2979FF;
+	border:#2979FF solid 2px;
 }
 #searchproductInput{
 	width: 150px;
@@ -42,12 +72,54 @@
 	background-color: transparent;
 	outline: none;
 }
-#searchproductimg{
-	margin-top: 5px;
+.subtitle{
+	background-color: #E0E0E0;
+	width: 150px;
+}
+.selectsearch{
+	height: 60px;
+}
+.sc{
+	width: 170px;
+	border-bottom: #E0E0E0 solid 2px;
+	padding-left: 5px;
+}
+/* 이미지파일로 체크하면 체크한 이미지가 나오게, 다시 체크안한이미지가 나오게 바꿔봐라 */
+/* >는 바로 아래 자식, +는 형제, 띄어쓰기(스페이스바)는 모든자식 */
+/* 박스개념 : padding은 border안에, margin은 border 밖에 */
+label{
+	position: relative;
+	top: 5px;
+}
+.sc > input + label{ 
+	display: inline-block;
 	width: 20px;
 	height: 20px;
+	border: 2px solid #bcbcbc;
+	cursor: pointer;
 }
-
+.sc > input:checked + label{
+	background-color: #666666;
+}
+.sc > input{
+	display: none;
+}
+.selectsearchbtn{
+	width: 150px;
+	height: 50px;
+	border:none;
+	background:#2979FF;
+	color:#fff;
+	outline: none;
+	font-size:15pt;
+	font-weight: 600;
+	cursor:pointer;
+}
+.selectsearchbtn:hover{
+	background:#fff;
+	color:#2979FF;
+	border:#2979FF solid 2px;
+}
 select{
 	height: 30px;
 	border: black solid 2px;
@@ -55,12 +127,13 @@ select{
 	font-weight: 800;
 }
 .producttable1,.producttable2,.producttable3{
-	border-spacing: 0px; /* 칸별 미세간격 제거 */
 	width: 1000px;
 	left: 550px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
+	border-top: #E0E0E0 solid 2px;
+	border-bottom: #E0E0E0 solid 2px;
 }
 .producttable1{
 	top: 100px;
@@ -74,4 +147,116 @@ select{
 .productimg{
 	width: 72px;
 	height: 72px;
+}
+.producttd{
+	border: white solid 2px;
+}
+.producttd:hover{
+	border: #666666 solid 2px;
+	cursor: pointer;
+}
+
+
+/* 이하 제품상세페이지 */
+.productdetailtable1,.productdetailtable2{
+	border-spacing: 0px;
+	width: 1000px;
+	left: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.productdetailtable1{
+	border: none;
+	height: 600px;
+	font-size: 15pt;
+	font-weight: 800;
+}
+.productname{
+	border-bottom: #E0E0E0 solid 2px;
+	padding-left:15px;
+	font-size: 20pt;
+	font-weight: 800;
+}
+.productdetailimgtd{
+	width: 40%;
+	height: 45%;
+}
+.productdetailimg{
+	width: 340px;
+	height: 340px;
+}
+.productdetailcode{
+	border-top: #E0E0E0 solid 2px;
+	border-bottom: #E0E0E0 solid 2px;
+	height: 30px;
+}
+.productdetailtd1{
+	width: 20%;
+}
+.productdetailoriginalpricetd{
+	width: 20%;
+}
+.productdetailsailpricetd{
+	width: 20%;
+	border-top: #E0E0E0 solid 2px;
+}
+.productdetailtable2{
+	margin-top: 20px;
+	height: 50px;
+	font-size: 15pt;
+	font-weight: 800;
+}
+.productdetailtd2{
+	width: 25%;
+}
+.productdetailtd2:hover{
+	background-color: #E0E0E0;
+}
+.productdetailevaluate{
+	width: 332px;
+}
+.productdetailscore{
+	width: 80px;
+	padding-bottom:10px;
+	font-size: 18pt;
+}
+.starone{
+	width: 36px;
+	height: 36px;
+}
+.productdetailsailprice{
+	border-top: #E0E0E0 solid 2px;
+	color: red;
+	font-size: 25pt;
+	font-weight: 900;
+}
+.productdetailnumber{
+	text-align-last:center; /* option 내 글자 가운데 정렬 */
+	width: 50px;
+}
+.productdetailbucketbtn,.purchasebtn{
+	font-size:20pt;
+	font-weight: 600;
+	cursor:pointer;
+	outline:none;
+	height: 100px;
+}
+.productdetailbucketbtn{
+	border:#2979FF solid 2px;
+	color:#2979FF;
+	background:#fff;
+	width: 185px;
+}
+.purchasebtn{
+	border:none;
+	background:#2979FF;
+	color:#fff;
+	width: 385px;
+}
+.purchasebtn:hover{
+	border:#2979FF solid 2px;
+	background:#fff;
+	color:#2979FF;
+	width: 385px;
 }

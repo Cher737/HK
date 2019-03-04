@@ -3,55 +3,241 @@
 
 #MypagemainTable{
 	margin-right: 150px;
-	width: 800px;
-	border: #A1887F solid 1px;
-	height: 150px;
+	width: 1000px;
+	border: #E0E0E0 solid 1px;
+	height: 200px;
 	border-collapse: collapse;
-	background-color: #EFEBE9;
+	background-color: #F5F5F5;
 }
-img{
-	width: 50px;
+
+#Mypagemaintag{
+	font-size: 30pt;
+	font-weight: 1000;
+	padding-bottom: 15px;
 }
 #MypageNametd{
 	width: 300px;
 	text-align: center;	
-	border-bottom: #D7CCC8 solid 1px;
-	border-right: #D7CCC8 solid 1px;
+	border-bottom: #E0E0E0 solid 1px;
+	border-right: #E0E0E0 solid 1px;
 }
 
 #Namespan1{
-font-size: 20pt;
+font-size: 25pt;
 font-weight: 700;	
 }
 #Namespan2{
-font-size: 15pt;
-font-weight: 700;	
-color: #757575;
+font-size: 18pt;
 padding-left: 10px;
 }
 #MypageGradetd{
-	border-right: #D7CCC8 solid 1px;
+	border-right: #E0E0E0 solid 1px;
 	width: 300px;
 	text-align: center;	
 }
 
 
 #MypagePointtd{
-	width: 250px;
-	padding-left: 70px;
-	padding-right: 70px;
-	border-bottom: #D7CCC8 solid 1px;
+	width: 130px;
+	padding-left: 50px;
+	padding-right: 5px;
+	border-bottom: #E0E0E0 solid 1px;
+	border-right: #E0E0E0 solid 1px;
 	color: #757575;
 	
 }
-MypagePointtd img{
+#MypagePointtd img{
 	width: 50px;
+	padding-right: 10px;
+}
+#MypageCoupontd img{
+	width: 50px;
+	padding-right: 10px;
 }
 #MypageCoupontd{
-	width: 250px;
+	width: 130px;
 	padding-left: 70px;
 	padding-right: 70px;
-	border-right: #D7CCC8 solid 1px;
+	border-right: #E0E0E0 solid 1px;
 	color: #757575;
+	
+}
+
+#Gradespan1{
+	font-size: 17pt;
+font-weight: 700;	
+color: #455A64;
+}
+
+#Gradespan2{
+font-size: 25pt;
+color: #9E9E9E;
+font-weight: 1000;	
+ text-decoration: none;
+ transition: 1s;
+ text-shadow: 0 0 .1em, 0 0 .3em;
+	}
+
+.Mypageinputgo{
+	width: 250px;
+	text-align: center;
+	color: #424242;
+	font-weight:800;
+	border-bottom: #E0E0E0 solid 1px;
+	font-size: 14pt;
+}
+#Mypagemenutable{
+	margin-top: 20px;
+	border-collapse: collapse;
+	width: 1000px;
+}
+.Mypagemenutd{
+	width: 190px;
+	height: 50px;
+	border: #A1887F solid 1px;
+	text-align: center;
+	background-color: #EFEBE9;
+	font-size: 12pt;
+	font-weight: 700;
+}
+.Mypagemenutd:hover{
+	cursor: pointer;
+}
+
+/* BuyList*/
+#BuyperiodTable{
+width: 800px;
+	background-color: #edf1ff;
+	margin-top: 23px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+}
+#BuyperiodTable tr td input{
+	width: 120px;
+	height: 20px;
+	margin-left: 10px;
+}
+#BuyperiodTable tr td button{
+	width: 50px;
+	height: 25px;
+	background-color:  #455A64;
+	color:white;
+	border:none;
+	font-weight: 800;
+	margin-right: 10px;
+}
+
+#Buyperioddiv{
+	
+	padding-right: 20px;
+	padding-left: 20px;
+	float: left;
+	font-size: 11pt;
+	font-weight: 700;
+}
+.Buyperiodclick{
+	margin-top: 3px;
+	width: 50px;
+	height: 25px;
+	border: #BDBDBD solid 1px;
+	float: left;
+	text-align: center;
+	font-size: 10pt;
+	color: #424242;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.Buyperiodcalendardiv{
+	border: #BDBDBD solid 1px;
+	float: left;
+	border: #BDBDBD solid 1px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color: white;
+	margin-right: 10px;
+}
+
+.Buyperiodcalendardiv img{
+	width: 15px;
+	height: 15px;
+}
+#MypageBuyTable{
+	border-collapse: collapse;
+	margin-top: 30px;
+	border-top: #263238 solid 3px;
+}
+
+.Buydaytd{
+	width:150px;
+	text-align: center;
+	height: 60px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+.Buyproducttd{
+	width: 500px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+.Buypricetd{
+	width:200px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+	
+}
+
+.Buystatetd{
+	width:150px;
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+.Buydaytd2{
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.Buyproducttd2{
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.Buypricetd2{
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+.Buystatetd2{
+	text-align: center;
+	height: 50px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Coupon*/
+
+#MyCouponSelectTable{
+width: 800px;
+	background-color: #edf1ff;
+	margin-top: 23px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	
 }

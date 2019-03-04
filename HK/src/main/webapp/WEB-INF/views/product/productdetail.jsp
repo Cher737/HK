@@ -21,7 +21,7 @@ $(function(){
 </head>
 <body>
 	
-	<table class="categorytable" border="1">
+	<table class="categorytable">
 		<tr>
 			<td class="categorytd1">
 				<select name="categoryone">
@@ -43,174 +43,87 @@ $(function(){
 					<option>여성하의</option>
 				</select>
 			</td>
-			<td class="categorytitle">남성상의</td>
+			<td class="categorytitle"></td>
 			
 			<td class="categorysearch1" align="right">
-				<input id="searchproductInput" placeholder="카테고리내 검색" maxlength="15" autocomplete="off">
 			</td>
 			<td class="categorysearch2" align="left">
-				<img id="searchproductimg" src="resources/img/search.png">
 			</td>
 		</tr>
 	</table>
 	
-	<table id="productnametable" border="1">
-		<tr align="left">
-			<td class="productname">엠포리오 아르마니 EMPORIO ARMANI</td>
-		</tr>
-	</table>
-	
-	
-	<table class="producttable1" border="1">
+	<table class="productdetailtable1">
 		<tr>
-			<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/01/87/32/02/00/01/10002328701_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/81/36/28/02/00/01/10002283681_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/66/64/49/00/00/02/20000496466_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/57/97/08/03/00/01/10003089757_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/15/43/38/00/00/02/20000384315_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div>
+			<td class="productname" colspan="7" align="left"> 엠포리오 아르마니 EMPORIO ARMANI</td>
+		</tr>
+		<tr >
+			<td rowspan="5" colspan="5" align="center" class="productdetailimgtd">
+				<img class="productdetailimg" src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_8.jpg/dims/resize/340x340">
+			</td>
+			<td class="productdetailoriginalpricetd" align="center">정상가</td>
+			<td align="center"> $ 370</td>
+		</tr>
+		<tr>
+			<td class="productdetailsailpricetd" align="center">할인가</td>
+			<td class="productdetailsailprice" align="center"> $ 340.2</td>
+		</tr>
+		<tr>
+			<td class="productdetailcode" colspan="2" align="center">상품코드 : 2013506111</td>
+		</tr>
+		<tr>
+			<td class="productdetailtd1" align="center">포인트</td>
+			<td align="center"> 결제금액의 5% 적립</td>
+		</tr>
+		<tr>
+			<td class="productdetailtd1" align="center">수량 :</td>
+			<td align="center">
+				<select class="productdetailnumber">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			 개</td>
+		</tr>
+		<tr>
+			<td align="center"><img class="productdetailsmallimg"
+					src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_8.jpg/dims/resize/68x68"></td>
+			<td align="center"><img class="productdetailsmallimg"
+					src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_10.jpg/dims/resize/68x68"></td>
+			<td align="center"><img class="productdetailsmallimg"
+					src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_11.jpg/dims/resize/68x68"></td>
+			<td align="center"><img class="productdetailsmallimg"
+					src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_12.jpg/dims/resize/68x68"></td>
+			<td align="center"><img class="productdetailsmallimg"
+					src="http://static.lottedfs.com/prod/prd-img/80/51/01/00/00/01/10000015180_13.jpg/dims/resize/68x68"></td>
+			<td class="productdetailbuckettd" rowspan="2" align="center">
+				<button class="productdetailbucketbtn">장바구니</button>
+			</td>
+			<td class="productpurchasetd" rowspan="2" align="center">
+				<button class="purchasebtn">바로구매</button>
 			</td>
 		</tr>
-	</table>
-	<table class="producttable2" border="1">
 		<tr>
-			<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/01/87/32/02/00/01/10002328701_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/81/36/28/02/00/01/10002283681_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/66/64/49/00/00/02/20000496466_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/57/97/08/03/00/01/10003089757_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/15/43/38/00/00/02/20000384315_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div>
+			<td class="productdetailevaluate" colspan="4" align="center">
+			<img class="starone" src="resources/img/starone.png">
+			<img class="starone" src="resources/img/starone.png">
+			<img class="starone" src="resources/img/starone.png">
+			<img class="starone" src="resources/img/starone.png">
+			<img class="starone" src="resources/img/starone.png">
 			</td>
+			<td class="productdetailscore" align="left">100 점</td> 
+		</tr>
+	</table>
+	
+	<table class="productdetailtable2" border="1">
+		<tr>
+			<td class="productdetailtd2" align="center">상세정보</td>
+			<td class="productdetailtd2" align="center">상품평</td>
+			<td class="productdetailtd2" align="center">상품 QnA</td>
+			<td class="productdetailtd2" align="center">취소/환불안내</td>
 		</tr>
 	</table>	
-	<table class="producttable3" border="1">		
-		<tr>
-			<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/01/87/32/02/00/01/10002328701_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/81/36/28/02/00/01/10002283681_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/66/64/49/00/00/02/20000496466_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/57/97/08/03/00/01/10003089757_3.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div></td>
-					<td>
-				<img class="topimg"
-					src="http://static.lottedfs.com/prod/prd-img/15/43/38/00/00/02/20000384315_1.jpg/dims/resize/180x180">
-					<div>
-						태그호이어
-						<p>TAG HEUER
-						<p>FORMULA 1
-					</div>
-					<div>1,450$</div>
-			</td>
-		</tr>
-	</table>
 		
 
 </body>
