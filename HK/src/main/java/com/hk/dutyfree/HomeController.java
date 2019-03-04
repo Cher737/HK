@@ -21,6 +21,7 @@ public class HomeController {
 	public String home(HttpServletRequest request) {
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
+		
 	}
 	
 	@RequestMapping(value = "/Support.FAQ", method = RequestMethod.GET)
