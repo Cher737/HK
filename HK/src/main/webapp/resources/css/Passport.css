@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+/* Main*/
+#PassportMaintable {
+	width: 800px;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+#PassportMaintd {
+	font-size: 20pt;
+	font-weight: 1000;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+/* Select*/
+#PassportSelectTable {
+	width: 800px;
+	border-collapse: collapse;
+}
+
+#PassportSelectTablemain {
+	font-size: 15pt;
+	font-weight: 800;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.PassportSelecttoptd1 {
+	background-color: #edf1ff;
+	border-top: black solid 2px;
+	border-bottom: #CFD8DC solid 1px;
+	width: 150px;
+	height: 40px;
+	padding-left: 15px;
+}
+
+.PassportSelecttoptd2 {
+	border-top: black solid 2px;
+	border-bottom: #CFD8DC solid 1px;
+	padding-left: 15px;
+	color: #424242;
+}
+
+.PassportSelecttd1 {
+	background-color: #edf1ff;
+	border-top: #CFD8DC solid 1px;
+	border-bottom: #CFD8DC solid 1px;
+	width: 150px;
+	height: 40px;
+	padding-left: 15px;
+}
+
+.PassportSelecttd2 {
+	border-top: #CFD8DC solid 1px;
+	border-bottom: #CFD8DC solid 1px;
+	padding-left: 15px;
+	color: #424242;
+}
+
+#Passportupdategotd {
+	height: 70px;
+	text-align: center;
+}
+
+#Passportupdategotd div {
+	background-color: red;
+	color: white;
+	font-size: 12pt;
+	font-weight: 800;
+	width: 100px;
+	padding: 15px;
+	margin-left: 335px;
+	margin-right: 335px;
+}
+
+#Passportupdategotd div:hover {
+	cursor: pointer;
+}
+/* Input*/
+/* Update*/
+#Passportupdategotd button {
+	background-color: red;
+	color: white;
+	font-size: 12pt;
+	font-weight: 1000;
+	width: 130px;
+	padding: 15px;
+	margin-left: 335px;
+	margin-right: 335px;
+	text-decoration: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	display: inline-block;
+	border: none;
+}
+.PassportSelecttd2 input{
+	height: 25px;
+	padding-left: 10px;
+	margin-top: 10px;
+	width: 150px;
+	border: #CFD8DC solid 1px;
+}
+.PassportSelecttd2 input:hover {
+	border: black solid 1px;
+}
+
+.PassportSelecttd2 span {
+	font-size: 10pt;
+	color: #424242;
+	padding-bottom: 5px;
+}
+#Passportnumbercheck{
+	background-color: #455A64;
+	color:white;
+	border:none;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+	font-size: 9pt;
+	padding: 10px;
+}
+#Passportnumberhelp{
+	float: left;
+	font-size: 10pt;
+	color: #424242;
+	padding-bottom: 5px;
+}
+#calendarinput{
+	float: left;
+	margin-bottom: 10px; 
+}
+#Passportcalendar{
+	border: #BDBDBD solid 1px;
+	float: left;
+	border: #BDBDBD solid 1px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color: white;
+	margin-right: 10px;
+	margin-top: 11px;
+	margin-left: 15px;
+}
+}
