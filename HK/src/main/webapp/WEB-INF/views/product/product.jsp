@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>상품목록페이지</title>
 <link rel="stylesheet" href="resources/css/product.css">
 <script src="resources/js/jquery.js"></script>
 <script type="text/javascript">

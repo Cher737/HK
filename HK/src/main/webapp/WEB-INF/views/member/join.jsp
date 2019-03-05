@@ -25,7 +25,7 @@
 			<tr>
 				<td>
 					<input autocomplete="off" name="id" class="joininput2" placeholder="ID 영문또는 숫자 6~15자" maxlength="15">
-					&nbsp;<span id="joinidok">중복확인</span>
+					&nbsp;<button id="joinidok">중복확인</button>
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td>
-					<input autocomplete="off" name="pw_chk" class="joininput" type="password" placeholder="비밀번호 확인 영문/숫자/특수문자조합 6~15자" maxlength="15">
+					<input autocomplete="off" name="pw_chk" class="joininput" type="password" placeholder="비밀번호 확인" maxlength="15">
 				</td>
 			</tr>
 		</table>
@@ -46,20 +46,22 @@
 					<input autocomplete="off" name="name" class="joininput" placeholder="이름" maxlength="15">
 				</td>
 			</tr>
-			<tr class="jointr1">
-				<td class="jointd1" colspan="3" align="center">성별
-					<input name="gender_m" class="joingender" type="radio"> 남
-					<input name="gender_f" class="joingender" type="radio"> 여
-				</td>
-			</tr>
 			<tr>
 				<td>
 					<input autocomplete="off" name="jumin" class="joininput" type="password" placeholder="주민등록번호 13자리 입력( ' - ' 없이)" maxlength="13">
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<input autocomplete="off" name="email" class="joininput" placeholder="이메일 입력" maxlength="20">
+				<td class="jointable2td">
+					<input autocomplete="off" name="email" class="joininput3" placeholder="이메일 입력" maxlength="20"> @
+					<input autocomplete="off" name="email2" class="joininput3" maxlength="11" readonly="readonly">
+					<select class="emailselect" name="emailcategory">
+						<option value="email1">naver.com</option>
+						<option value="email2">hanmail.net</option>
+						<option value="email3">nate.com</option>
+						<option value="email4">gmail.com</option>
+						<option value="email5">hotmail.com</option>
+					</select>
 				</td>
 			</tr>
 			<tr>

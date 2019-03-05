@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>상품상세페이지</title>
 <link rel="stylesheet" href="resources/css/product.css">
 <script src="resources/js/jquery.js"></script>
 <script type="text/javascript">
@@ -24,7 +24,7 @@ $(function(){
 	<table class="categorytable">
 		<tr>
 			<td class="categorytd1">
-				<select name="categoryone">
+				<select class="categoryone">
 					<option value="">스킨케어/메이크업</option>
 					<option>향수/바디/헤어</option>
 					<option>가방/지갑</option>
@@ -36,7 +36,7 @@ $(function(){
 				</select>
 			</td>
 			<td class="categorytd2">
-				<select name="categorytwo">
+				<select class="categorytwo">
 					<option value="">남성상의</option>
 					<option>남성하의</option>
 					<option>여성상의</option>
