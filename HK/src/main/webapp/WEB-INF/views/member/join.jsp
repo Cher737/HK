@@ -25,7 +25,7 @@
 			<tr>
 				<td>
 					<input autocomplete="off" name="id" class="joininput2" placeholder="ID 영문또는 숫자 6~15자" maxlength="15">
-					&nbsp;<span id="joinidok">중복확인</span>
+					&nbsp;<button id="joinidok">중복확인</button>
 				</td>
 			</tr>
 			<tr>

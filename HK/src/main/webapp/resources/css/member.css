@@ -87,7 +87,6 @@
 	margin-top: 10px;
 }
 #joinAddrSearchBtn,#joinidok {
-	height: 30px;
 	font-size: 12pt;
 	font-weight: 500;
 	border: none;
@@ -95,10 +94,8 @@
 	cursor: pointer;
 	background-color: #2979FF;
 	padding: 7px;
+	padding-top: 5px;
 	border-radius: 5px;
-	
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 .logininput::placeholder,.joininput::placeholder{ /* (플레이스홀더는 :: 콜론 두개써야함) */
 	font-size: 12pt;
@@ -162,16 +159,21 @@
 }
 
 /*	이하 회원정보보기 페이지	*/
-
-#memberinfotable{
+#memberinfotitle{
+	width: 1000px;
+	border: none;
+	margin-top: 20px;
+}
+.infotitle{
+	padding-left: 15px;
+	font-size: 25pt;
+	font-weight: 800;
+}
+.infotable{
 	border-spacing: 0px;
+	border-top: black solid 2px;
 	width: 1000px;
 	height: 500px;
-	left: 550px;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 13pt;
-	font-weight: 500;
 }
 .memberinput1,.memberinput2{
 	margin-left: 20px;
@@ -179,21 +181,14 @@
 	height: 30px;
 	padding-left: 10px;
 	outline: none;
+	font-size: 12pt;
 }
 .memberinput1::placeholder,.memberinput2::placeholder{
 	font-size: 12pt;
 	font-weight: 500;
 }
-.memberinput2{
+.memberinput1,.memberinput2{
 	border: none;
-}
-.infotitle{
-	padding-left:15px;
-	font-size: 25pt;
-	font-weight: 800;
-}
-.infosubtitletr{
-	border-top: black solid 2px;
 }
 .infosubtitle1,.infosubtitle2{
 	border-bottom: #E0E0E0 solid 2px;
@@ -204,29 +199,109 @@
 .infosubtitle1{
 	background-color: #E3F2FD55;
 }
-/* 이하 회원탈퇴, 회원정보변경버튼 */
-.byeBtn,.updateBtn{
+/* 이하 회원탈퇴, 회원정보변경버튼, 이전, 정보수정버튼(4개 동시) */
+.byeBtn,.updateBtn,.goBackBtn,.updateOkBtn{
 	font-size:18pt;
 	font-weight: 600;
 	cursor:pointer;
 	outline:none;
 	height: 60px;
 }
-.byeBtn{
+.byeBtn,.goBackBtn{
 	border: red solid 2px;
 	color: red;
 	background:#fff;
 	width: 230px;
 }
-.updateBtn{
+.updateBtn,.updateOkBtn{
 	border:none;
 	background: red;
 	color:#fff;
 	width: 230px;
+	transition: 300ms ease all;
 }
-.updateBtn:hover{
+.updateBtn:hover,.updateOkBtn:hover{
 	border: red solid 2px;
 	background:#fff;
 	color: red;
 	width: 230px;
+	transition: 300ms ease all;
+}
+
+/*	이하 회원정보수정 페이지		*/
+#memberupdatetable{
+	width: 1000px;
+	border: none;
+	margin-top: 20px;
+}
+.updatetitle{
+	padding-left: 15px;
+	font-size: 25pt;
+	font-weight: 800;
+	border: none;
+}
+.updatetable{
+	border-spacing: 0px;
+	border-top: black solid 2px;
+	width: 1000px;
+	height: 800px;
+}
+.memberupdateinput1,.memberupdateinput2,.memberupdateinput3,.memberupdateinput4,.memberupdateAddrNoinput{
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+	font-size: 12pt;
+}
+.memberupdateinput4{
+	border: none;
+	margin-left: 20px;
+}
+.memberupdateinput1{
+	width: 400px;
+	margin-left: 20px;
+}
+.memberupdateinput2{
+	width: 180px;
+}
+.updateemailselect{
+	width: 180px;
+	height: 37px;
+	outline: none;
+	margin-bottom: 3px;
+	font-size: 12pt;
+}
+.memberupdateinput3{
+	width: 180px;
+	margin-left: 20px;
+}
+.memberupdateinput1::placeholder,.memberupdateinput2::placeholder,.memberupdateinput3::placeholder{
+	font-size: 12pt;
+	font-weight: 500;
+}
+.memberupdateAddrNoinput{
+	width: 350px;
+	margin-left: 20px;
+}
+.updatesubtitle1{
+	border-bottom: #E0E0E0 solid 2px;
+	font-size: 15pt;
+	font-weight: 800;
+	padding-left: 20px;
+	background-color: #E3F2FD55;
+}
+.updatesubtitle2{
+	border-bottom: #E0E0E0 solid 2px;
+	font-size: 15pt;
+	font-weight: 800;
+}
+#updateAddrSearchBtn{
+	font-size: 12pt;
+	font-weight: 500;
+	border: none;
+	color: white;
+	cursor: pointer;
+	background-color: #2979FF;
+	padding: 7px;
+	padding-top: 5px;
+	border-radius: 5px;
 }
