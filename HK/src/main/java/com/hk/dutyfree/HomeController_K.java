@@ -74,12 +74,22 @@ public class HomeController_K {
 	}
 	
 	@RequestMapping(value = "/memberinfo", method = RequestMethod.GET)
-	public String memberInfo() {		
-		return "member/memberInfo";
+	public String memberInfo(HttpServletRequest request) {
+		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
+		request.setAttribute("Mypage", "../member/memberInfo.jsp");
+		return "index";
 	}
 	
 	@RequestMapping(value = "/memberupdate", method = RequestMethod.GET)
-	public String memberUpdate() {		
-		return "member/memberUpdate";
+	public String memberUpdate(HttpServletRequest request) {
+		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
+		request.setAttribute("Mypage", "../member/memberUpdate.jsp");
+		return "index";
+	}
+	
+	@RequestMapping(value = "/bucket", method = RequestMethod.GET)
+	public String bucket(HttpServletRequest request) {
+		request.setAttribute("centerpage", "product/bucket.jsp");
+		return "index";
 	}
 }
