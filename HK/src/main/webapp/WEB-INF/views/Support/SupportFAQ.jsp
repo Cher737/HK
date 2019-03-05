@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,7 +10,7 @@
 	<table id="FAQsearchtable">
 		<tr>
 			<td align="center"><input placeholder="FAQ"></td>
-			<td><img src="resources/img/search.png"></td>
+			<td align="center"><img src="resources/img/search.png"></td>
 		</tr>
 	</table>
 	<table id="FAQmenutable">
@@ -35,27 +35,27 @@
 					</tr>
 					<tr>
 
-						<td class ="FAQNumber">1</td>
-						<td class ="FAQCategory">상품수령</td>
-						<td class ="FAQquestion">상품 수령은 어떻게 하나요?</td>
+						<td class ="FAQNumber2">1</td>
+						<td class ="FAQCategory2">상품수령</td>
+						<td class ="FAQquestion2">상품 수령은 어떻게 하나요?</td>
 					</tr>
 					<tr>
 
-						<td class ="FAQNumber">2</td>
-						<td class ="FAQCategory">주문/결제</td>
-						<td class ="FAQquestion">편명이 입력이 안 돼요.</td>
+						<td class ="FAQNumber2">2</td>
+						<td class ="FAQCategory2">주문/결제</td>
+						<td class ="FAQquestion2">편명이 입력이 안 돼요.</td>
 					</tr>
 					<tr>
 
-						<td class ="FAQNumber">3</td>
-						<td class ="FAQCategory">주문/결제</td>
-						<td class ="FAQquestion">출국일이 변경되었습니다. 어떻게 해야하나요?</td>
+						<td class ="FAQNumber2">3</td>
+						<td class ="FAQCategory2">주문/결제</td>
+						<td class ="FAQquestion2">출국일이 변경되었습니다. 어떻게 해야하나요?</td>
 					</tr>
 					<tr>
 
-						<td class ="FAQNumber">4</td>
-						<td class ="FAQCategory">할인쿠폰</td>
-						<td class ="FAQquestion">할인쿠폰과 포인트를 적용하지 않고 주문했을때 어떻게 적용하나요?</td>
+						<td class ="FAQNumber2">4</td>
+						<td class ="FAQCategory2">할인쿠폰</td>
+						<td class ="FAQquestion2">할인쿠폰과 포인트를 적용하지 않고 주문했을때 어떻게 적용하나요?</td>
 					</tr>
 					
 					

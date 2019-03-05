@@ -51,7 +51,7 @@
 						<td class="Mypagemenutd">회원정보</td>
 						<td id="Buylist" class="Mypagemenutd">구매 내역</td>
 						<td id="Coupon" class="Mypagemenutd">쿠폰 조회</td>
-						<td class="Mypagemenutd">1:1 문의내역</td>
+						<td id="MyCounseling" class="Mypagemenutd">1:1 문의내역</td>
 					</tr>
 					<tr>
 						<td align="center" colspan="4"><jsp:include page="${Mypage }"></jsp:include></td>

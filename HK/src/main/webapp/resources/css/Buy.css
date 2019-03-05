@@ -1,0 +1,236 @@
+@CHARSET "UTF-8";
+
+#BuyPageArea {
+	
+}
+
+.BuyPageSubtitle {
+	text-align: left;
+	font-size: 20pt;
+	font-weight: 800;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+.BuyPageSubtitle2 {
+	font-size: 11pt;
+	color: #616161;
+	font-weight: 500;
+	padding-left: 10px;
+}
+
+#BuyMyInfoTable {
+	width: 1000px;
+	border: #BDBDBD solid 1px;
+	border-top: Black solid 2px;
+	border-collapse: collapse;
+}
+
+.MyInfotd1 {
+	background-color: #edf1ff;
+	width: 200px;
+	border-bottom: #BDBDBD solid 1px;
+	height: 60px;
+	font-weight: 500;
+	padding-left: 20px;
+}
+
+.MyInfotd2 {
+	background-color: white;
+	width: 200px;
+	border-bottom: #BDBDBD solid 1px;
+	height: 60px;
+	font-weight: 500;
+	padding-left: 20px;
+}
+
+#LeaveChangeDiv {
+	text-align: center;
+	width: 100px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: black solid 1px;
+	margin-left: 880px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: 500;
+	margin-top: -30px;
+}
+
+#BuyLeaveTable {
+	width: 1000px;
+	border: #BDBDBD solid 1px;
+	border-top: Black solid 2px;
+	border-collapse: collapse;
+}
+
+#BuyLeftTable {
+	border: #BDBDBD solid 1px;
+	border-top: Black solid 2px;
+	border-collapse: collapse;
+}
+
+#BuyLeftTable tr td {
+	padding-left: 20px;
+}
+
+.BuyLefttd1 {
+	background-color: #edf1ff;
+	width: 100px;
+	border-bottom: #BDBDBD solid 1px;
+	font-weight: 500;
+}
+
+#BuyCoupontd1 {
+	height: 50px;
+	border-bottom: #BDBDBD solid 1px;
+}
+
+#BuyCoupontd1 span {
+	padding-left: 20px;
+	color: #EF5350;
+}
+
+#BuyCoupontd1 button {
+	width: 50px;
+	height: 30px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#BuyPointtd1 {
+	width: 400px;
+	height: 50px;
+}
+
+#BuyPointtd1 span {
+	padding-left: 20px;
+	color: #9E9E9E;
+	font-weight: 1000;
+}
+
+#BuyPointtd2 {
+	height: 50px;
+	border-bottom: #BDBDBD solid 1px;
+}
+
+#Pointinput {
+	height: 20px;
+	outline: none;
+}
+
+#Buypaymenttd {
+	height: 110px;
+	border-bottom: #BDBDBD solid 1px;
+}
+
+#Buypaymenttd input {
+	margin-right: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.BuyCardtd {
+	height: 50px;
+}
+
+.BuyCardtd select {
+	height: 30px;
+	width: 100px;
+	margin-left: 20px;
+}
+
+#BuyCardimgtd {
+	border-top: #BDBDBD solid 1px;
+}
+
+#BuyRightTable {
+	width: 300px;
+	border-collapse: collapse;
+	margin-left: 50px;
+	border: black solid 2px;
+}
+
+#BuyRightTitletd {
+	height: 80px;
+	text-align: center;
+	font-size: 20pt;
+	font-weight: 1000;
+	border: #BDBDBD solid 1px;
+	background-color: #F5F5F5;
+}
+
+#BuyRightBuymoney {
+	height: 80px;
+	text-align: center;
+	border-bottom: #EEEEEE solid 1px;
+	font-weight: 700;
+	font-size: 14pt;
+}
+
+#BuyRightBuymoney2 {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 13pt;
+	border-bottom: #EEEEEE solid 1px;
+	font-weight: 700;
+}
+
+.BuyRighttd1 {
+	height: 50px; text-align : center;
+	font-weight: 600;
+	color: #616161;
+	text-align: center;
+}
+
+.BuyRighttd2 {
+	text-align: right;
+	padding-right: 20px;
+	font-weight: 600;
+	font-size: 11pt;
+	color: #EF5350;
+}
+
+#BuyLastMoneytitle {
+	border-top: #BDBDBD solid 1px;
+	background-color: #edf1ff;
+	text-align: right;
+	padding-right: 20px;
+	font-weight: 700;
+	font-size: 14pt;
+	height: 50px;
+}
+
+#BuyLastMoney {
+	background-color: #edf1ff;
+	text-align: right;
+	padding-right: 20px;
+	font-weight: 700;
+	font-size: 20pt;
+	Color: #D84315;
+	height: 100px;
+}
+
+#BuyLastMoney span {
+	font-size: 15pt;
+	color: #616161;
+}
+
+#BuyLastButtontd {
+	background-color: #edf1ff;
+	height: 100px;
+}
+
+#BuyLastButtontd button {
+	background-color: #B71C1C;
+	height: 70px;
+	font-size: 16pt;
+	color: white;
+	font-weight: 1000;
+	font-family: 'Noto Sans KR', sans-serif;
+	width: 280px;
+}

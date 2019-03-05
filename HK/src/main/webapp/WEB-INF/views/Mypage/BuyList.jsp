@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body><div id="MypageMaintitle" >구매내역</div>
 	<table>
 		<tr>
 			<td align="center">
@@ -22,6 +22,7 @@
 						<td>
 							<div class="Buyperiodclick">6개월</div>
 						</td>
+						<td id="widthtd"></td>
 						<td>
 						<input>
 						</td>
@@ -30,7 +31,7 @@
 							<img src="resources/img/calendar.png">
 						</div>
 						</td>
-						<td>~</td>
+						<td id="swung">~</td>
 						<td>
 						<input>
 						</td>

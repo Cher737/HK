@@ -1,64 +1,106 @@
 @CHARSET "UTF-8";
 
-#SupportToptable {
-	width: 90%;
-	border: black solid 2px;
-	border-collapse: collapse;
-}
-
-#SupportTopMain {
-	height: 150px;
+#SupportTopmain {
 	font-size: 30pt;
 	font-weight: 1000;
-	border-bottom: black solid 2px;
+	padding-bottom: 15px;
+	text-align: left;
+}
+
+#SupportToptable {
+	width: 1000px;
 	border-collapse: collapse;
+	border: #E0E0E0 solid 1px;
 }
 
 .SupportTopmenu {
-	height: 40px;
+	width: 145px;
+	height: 150px;
 	text-align: center;
-	font-size: 13pt;
+	background-color: #F5F5F5;
+	font-size: 12pt;
 	font-weight: 700;
-	border: black solid 2px;
-	border-collapse: collapse;
+}
+#FAQMenuDiv{
+padding-top: 10px;
+ margin-left: 35px;	
+ height: 80px;
+}
+#SupportmenuDiv{
+	padding-top: 10px;
+	border-right: #E0E0E0 solid 1px;
+	height: 80px;
+	margin-left: -30px;
+}
+
+#SupportShopingDiv{
+	padding-top: 7px;
+	border-right: #E0E0E0 solid 1px;
+	height: 80px;
+}
+#SupportShopDiv{
+	padding-top: 7px;
+	border-right: #E0E0E0 solid 1px;
+	height: 80px;
+}
+#SupportMemberDiv{
+	padding-top: 7px;
+	height: 80px;
+}
+
+.SupportTopmenu img{
+ width: 50px;	
+}
+.SupportTopmenu2 {
+	border-top: #E0E0E0 solid 1px;
+	border-bottom: #E0E0E0 solid 1px;
+	width: 270px;
+	height: 150px;
+	text-align: center;
+	background-color: #F5F5F5;
+	font-size: 12pt;
+	font-weight: 700;
 }
 
 #FAQsearchtable {
 	width: 700px;
 	height: 40px;
-	border: black solid 2px;
+	border: #9E9E9E solid 1px;
 	margin-top: 50px;
 }
 
 #FAQsearchtable input {
 	border: none;
-	width: 640px;
+	width: 600px;
 	height: 40px;
 	font-size: 15pt;
+	padding-left: 30px;
+	outline: none;
 }
 
 #FAQsearchtable img {
 	width: 25px;
 	height: 25px;
 	padding-bottom: 0px;
+	padding-right:20px;
 }
 
-#FAQmenutable{
+#FAQmenutable {
 	margin-top: 50px;
-border-collapse: collapse;
-width: 90%;
+	border-collapse: collapse;
+	width: 90%;
 }
 
 .FAQmenutd:hover {
-	background-color: silver;
+	background-color: #424242;
 	color: white;
 }
 
 .FAQmenutd {
+	width: 100px;
 	margin-top: 50px;
 	padding: 0;
-	border-top: black solid 2px;
-	border-bottom: black solid 2px;
+	border: #BDBDBD solid 1px;
 	text-align: center;
 	height: 40px;
 }
@@ -66,24 +108,54 @@ width: 90%;
 .FAQNumber {
 	width: 70px;
 	text-align: center;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+	height:60px;
+	border-top: black solid 2px;
 }
 
 .FAQCategory {
 	width: 100px;
 	text-align: center;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+	height:60px;
+	border-top: black solid 2px;
 }
 
 .FAQquestion {
 	width: 770px;
 	text-align: center;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+	height:60px;
+	border-top: black solid 2px;
+}
+.FAQNumber2 {
+	width: 70px;
+	text-align: center;
+	border-bottom: silver solid 1px;
+	height:60px;
 }
 
-#FAQquestiontd{
-	background-color: silver;
+.FAQCategory2 {
+	width: 100px;
+	text-align: center;
+	border-bottom: silver solid 1px;
+	height:60px;
 }
+
+.FAQquestion2 {
+	width: 770px;
+	text-align: center;
+	border-bottom: silver solid 1px;
+	height:60px;
+}
+
+
 #FAQquestionTable {
-	
 	border-collapse: collapse;
+	margin-top: 40px;
 }
 
 #CounselingTable {
@@ -92,7 +164,7 @@ width: 90%;
 	margin-top: 30px;
 	border-collapse: collapse;
 	background-color: #F5F5F5;
-	color:#616161;
+	color: #616161;
 }
 
 #CounselingTableMain {
@@ -104,7 +176,7 @@ width: 90%;
 }
 
 .CounselingTableMenu {
-	padding-top:10px;
+	padding-top: 10px;
 	width: 150px;
 	font-size: 11pt;
 	font-weight: 700;
@@ -122,18 +194,20 @@ width: 90%;
 }
 
 .CounselingTableInputTd {
-	padding-top:10px;
+	padding-top: 10px;
 	width: 600px;
 	padding-left: 10px;
 }
+
 .CounselingTableInputshortTd {
-	padding-top:10px;
+	padding-top: 10px;
 	width: 600px;
 	padding-left: 10px;
 }
+
 .CounselingTableInputTd button {
 	width: 60px;
-	height: 27px;	
+	height: 27px;
 	margin-left: 10px;
 	background: #1E88E5;
 	border-radius: 5px;
@@ -141,9 +215,10 @@ width: 90%;
 	font-weight: 800;
 	cursor: pointer;
 }
+
 .CounselingTableInputshortTd button {
 	width: 60px;
-	height: 27px;	
+	height: 27px;
 	margin-left: 10px;
 	background: #1E88E5;
 	border-radius: 5px;
@@ -151,30 +226,34 @@ width: 90%;
 	font-weight: 800;
 	cursor: pointer;
 }
+
 .CounselingTableInputTd input {
 	width: 520px;
 	height: 25px;
-	
 }
+
 .CounselingTableInputshortTd input {
 	width: 220px;
 	height: 25px;
-	
 }
+
 .CounselingTableInputshortTd select {
 	width: 150px;
 	height: 30px;
 	text-align: center;
 }
+
 .CounselingTableInputTd textarea {
 	width: 520px;
 	height: 490px;
 }
-#Counselingfileinput{
+
+#Counselingfileinput {
 	width: 300px;
 	height: 30px;
 }
-#CounselingButtontd button{
+
+#CounselingButtontd button {
 	width: 200px;
 	height: 50px;
 	background-color: #0D47A1;
@@ -184,7 +263,8 @@ width: 90%;
 	border-radius: 10px;
 	cursor: pointer;
 }
-#CounselingButtontd{
-padding-top:30px;
-padding-bottom:30px;	
+
+#CounselingButtontd {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }

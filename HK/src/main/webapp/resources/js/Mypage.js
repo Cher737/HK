@@ -2,6 +2,9 @@ $(function() {
 		$("#Buylist").click(function() {
 			location.href = "Mypage.main";
 		});
+		$("#MyCounseling").click(function() {
+			location.href = "Mypage.MyCounseling";
+		});
 		
 		$("#Coupon").click(function() {
 			location.href = "Mypage.Coupon";

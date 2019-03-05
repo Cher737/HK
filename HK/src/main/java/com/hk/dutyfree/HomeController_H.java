@@ -49,6 +49,12 @@ public class HomeController_H {
 		request.setAttribute("Mypage", "Coupon.jsp");
 		return "index";
 	}
+	@RequestMapping(value = "/Mypage.MyCounseling", method = RequestMethod.GET)
+	public String MyCounseling(HttpServletRequest request) {
+		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
+		request.setAttribute("Mypage", "MyCounseling.jsp");
+		return "index";
+	}
 	
 	@RequestMapping(value = "/Mypage.Passport.main", method = RequestMethod.GET)
 	public String PassPortMain(HttpServletRequest request) {
@@ -68,6 +74,12 @@ public class HomeController_H {
 	public String LeaveMain(HttpServletRequest request) {
 		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
 		request.setAttribute("Mypage", "LeaveMain.jsp");
+		return "index";
+	}
+	
+	@RequestMapping(value = "/Mypage.Buy", method = RequestMethod.GET)
+	public String Buy(HttpServletRequest request) {
+		request.setAttribute("centerpage", "Mypage/Buy.jsp");
 		return "index";
 	}
 }

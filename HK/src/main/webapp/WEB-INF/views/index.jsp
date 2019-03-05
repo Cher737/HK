@@ -87,7 +87,7 @@
 				<div class="menu1">
 					<a href="product">스킨케어/메이크업</a>
 				</div>
-				<div class="menu1">향수/바디/헤어</div>
+				<div class="menu1"><a href="Mypage.Buy">향수/바디/헤어</a></div>
 				<div class="menu1">가방/지갑</div>
 				<div class="menu1">시계/주얼리</div>
 				<div class="menu1">패션/잡화</div>
