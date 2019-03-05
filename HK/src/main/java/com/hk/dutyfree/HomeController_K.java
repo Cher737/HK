@@ -17,11 +17,11 @@ public class HomeController_K {
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(HttpServletRequest request) {
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
-		
 	}
 	
 	@RequestMapping(value = "/Support.FAQ", method = RequestMethod.GET)
@@ -37,6 +37,7 @@ public class HomeController_K {
 		request.setAttribute("Surportpage", "Counseling.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/Mypage.main", method = RequestMethod.GET)
 	public String Mypage(HttpServletRequest request) {
 		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
