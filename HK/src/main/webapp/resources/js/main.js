@@ -5,4 +5,7 @@ $(function() {
 		maxSlides: true,
 		auto: true
 	});	
+	
+	
+	
 });

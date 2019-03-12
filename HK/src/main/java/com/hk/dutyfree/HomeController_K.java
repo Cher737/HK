@@ -3,14 +3,15 @@ package com.hk.dutyfree;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
+
 @Controller
 public class HomeController_K {
-	
 	
 	@RequestMapping(value = "/login.go", method = RequestMethod.GET)
 	public String login2() {		
@@ -22,17 +23,6 @@ public class HomeController_K {
 		return "member/join";
 	}
 	
-	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public String product(HttpServletRequest request) {
-		request.setAttribute("centerpage", "product/product.jsp");
-		return "index";
-	}
-	
-	@RequestMapping(value = "/product.detail", method = RequestMethod.GET)
-	public String product2(HttpServletRequest request) {
-		request.setAttribute("centerpage", "product/productdetail.jsp");
-		return "index";
-	}
 	
 	@RequestMapping(value = "/memberinfo", method = RequestMethod.GET)
 	public String memberInfo(HttpServletRequest request) {

@@ -38,7 +38,7 @@
 	width: 100px;
 }
 .categorytitle{
-	font-size: 35pt;
+	font-size: 20pt;
 	font-weight: 800;
 	width: 200px;
 }
@@ -362,4 +362,13 @@ label{
 	color: red;
 	width: 230px;
 	transition: 300ms ease all;
+}
+.pagecount{
+	float: left;
+	margin-top:50px;
+	margin-bottom:50px;
+	margin-right: 10px;
+}
+.pagecount:hover{
+	cursor: pointer;
 }
