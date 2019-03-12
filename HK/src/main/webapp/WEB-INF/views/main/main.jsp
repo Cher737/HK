@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="resources/js/main.js"></script>
 </head>
 <body>
 	<table id="centerpage">
@@ -12,13 +13,19 @@
 			<td id="centerimgtd">
 			<div class="bxslider">
 			<div>
+			<a href="Mypage.Buy">
 			<img src="resources/img/S10.jpg">
+			</a>
 			</div>
 			<div>
+			<a href="Mypage.Buy">
 			<img src="resources/img/S102.jpg">
+			</a>
 			</div>
 			<div>
+			<a href="Mypage.Buy">
 			<img src="resources/img/s102.png">
+			</a>
 			</div>
 			</div>
 			</td>

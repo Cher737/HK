@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dutyfree.user.UserMapper">
+	<insert id="join" parameterType="com.hk.dutyfree.user.User">
+		insert into hk_user
+		values(#{u_id}, #{u_pw}, #{u_name}, #{u_addr}, #{u_mail}, #{u_phone}, #{u_jumin}, sysdate, #{u_grade}, sysdate, #{u_point})
+	</insert>
+	<insert id="join2" parameterType="com.hk.dutyfree.user.Passport">
+		insert into passport
+		values(#{pp_ppnumber}, #{pp_id}, #{pp_exp}, #{pp_nationality}, #{pp_engname})
+	</insert>
+	
+	<select id="getAllMember" resultType="com.hk.dutyfree.user.User">
+		select * from
+		hk_user order by u_name
+	</select>
+	<select id="getMemberById" parameterType="com.hk.dutyfree.user.User"
+		resultType="com.hk.dutyfree.user.User">
+		select * from hk_user where u_id=#{u_id}
+	</select>
+	
+	<update id="update" parameterType="com.hk.dutyfree.user.User">
+		update hk_user
+		set
+		u_pw=#{u_pw}, u_name=#{u_name}, u_addr=#{u_addr}, u_mail=#{u_mail}, u_phone=#{u_phone}, u_jumin=#{u_jumin}
+		where u_id=#{u_id}
+	</update>
+	<delete id="bye" parameterType="com.hk.dutyfree.user.User">
+		delete from hk_user where
+		u_id=#{u_id}
+	</delete>
+
+</mapper>
