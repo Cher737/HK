@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR"
 	rel="stylesheet">
 <script src="resources/js/jquery.js"></script>
+<script src="resources/js/go.js"></script>
 <script src="resources/js/index.js"></script>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">

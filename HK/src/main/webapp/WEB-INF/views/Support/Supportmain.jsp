@@ -14,9 +14,9 @@
 				<div id="SupportTopmain">고객센터</div>
 				<table id="SupportToptable">
 					<tr>
-						<td class="SupportTopmenu"><div id="FAQMenuDiv"><a href="Support.Counseling"><img
+						<td class="SupportTopmenu"><div id="FAQMenuDiv"><a href="Support.FAQ"><img
 								src="resources/img/questions.png"><br>자주묻는질문 ></a></div></td>
-						<td class="SupportTopmenu"><div id="SupportmenuDiv"><a href="Support.FAQ"><img
+						<td class="SupportTopmenu"><div id="SupportmenuDiv"><a href="Support.Counseling"><img
 								src="resources/img/outbox.png"><br>1:1문의 ></a></div></td>
 						<td class="SupportTopmenu2"><div id="SupportShopingDiv"><p>인터넷 쇼핑문의<br> 1633-5000</div>
 						</td>

@@ -47,6 +47,10 @@ padding-top: 10px;
 	padding-top: 7px;
 	height: 80px;
 }
+A:link {text-decoration:none; color:black;}
+A:visited {text-decoration:none; color:black;}
+A:active {text-decoration:none; color:black;}
+A:hover {text-decoration:underline; color:black;}
 
 .SupportTopmenu img{
  width: 50px;	

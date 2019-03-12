@@ -51,17 +51,6 @@ public class HomeController_K {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/product", method = RequestMethod.GET)
-	public String product(HttpServletRequest request) {
-		request.setAttribute("centerpage", "product/product.jsp");
-		return "index";
-	}
-	
-	@RequestMapping(value = "/product.detail", method = RequestMethod.GET)
-	public String product2(HttpServletRequest request) {
-		request.setAttribute("centerpage", "product/productdetail.jsp");
-		return "index";
-	}
 	
 	@RequestMapping(value = "/memberinfo", method = RequestMethod.GET)
 	public String memberInfo(HttpServletRequest request) {
