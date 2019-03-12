@@ -51,7 +51,6 @@ public class HomeController_K {
 		return "index";
 	}
 	
-	
 	@RequestMapping(value = "/memberinfo", method = RequestMethod.GET)
 	public String memberInfo(HttpServletRequest request) {
 		if (uDAO.loginCheck(request)) {
@@ -83,7 +82,7 @@ public class HomeController_K {
 			uDAO.divideAddr(request);
 			uDAO.divideMail(request);
 			request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
-			request.setAttribute("Mypage", "../member/memberUpdate.jsp");
+			request.setAttribute("Mypage", "../member/memberInfo.jsp");
 		} else {
 			request.setAttribute("centerpage", "main/main.jsp");
 		}
