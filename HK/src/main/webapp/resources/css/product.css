@@ -126,12 +126,8 @@ label{
 }
 .producttable1,.producttable2,.producttable3{
 	width: 1000px;
-	left: 550px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
-	border-top: #E0E0E0 solid 2px;
-	border-bottom: #E0E0E0 solid 2px;
 }
 .producttable1{
 	top: 100px;
@@ -148,10 +144,6 @@ label{
 }
 .producttd{
 	border: white solid 2px;
-}
-.producttd:hover{
-	border: #666666 solid 2px;
-	cursor: pointer;
 }
 
 
@@ -371,4 +363,73 @@ label{
 }
 .pagecount:hover{
 	cursor: pointer;
+}
+
+.pricediv{
+	font-size: 13pt;
+	color: red;
+	font-weight: 1000;
+	text-align: center;
+}
+.brandtd{
+	font-wieght: 1000;
+	font-size: 13pt;
+	text-align: center;
+	width: 200px;
+	height: 40px;
+}
+.nametd{
+	font-size: 10pt;
+	text-align: center;
+	width: 200px;
+	height: 50px;
+}
+.pricespan{
+	text-decoration: line-through;
+	color: #616161;
+	font-size: 10pt;
+	margin-right: 10px;
+}
+.pricetd{
+	text-align: center;
+}
+.discountpricetd{
+	text-align: center;
+}
+.discountratespan{
+	font-weight: 1000;
+	font-size: 11pt;
+	color: #424242;
+}
+.carttd{
+	border-top: white solid 1px;
+	border-right: white solid 1px;
+	opacity: 0;
+}
+.buytd{
+	border-top: white solid 1px;
+	opacity: 0;
+}
+
+.discountpricespan{
+	font-size: 14pt;
+	font-weight: 1000;
+	color: red;
+	margin-right: 10px;
+}
+.price2span{
+font-size:9pt;
+font-weight: 1000;
+color: gray;
+}
+.inproducttable{
+	border: white solid 1px;
+	border-spacing: 0px;
+	text-align: center;
+	height: 400px;
+	cursor: pointer;
+}
+.inimgtd{
+	width: 200px;
+	height: 200px;
 }

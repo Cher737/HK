@@ -32,14 +32,14 @@
 			<td class="infosubtitle1">생년월일</td>
 			<td class="infosubtitle2">
 				<input class="memberinput2" name="u_birth" readonly="readonly" autocomplete="off"
-				value="${sessionScope.loginMember.u_jumin }" maxlength="6">
+				value="${u_birthInfo }" maxlength="6">
 			</td>
 		</tr>
 		<tr>
 			<td class="infosubtitle1">이메일</td>
 			<td class="infosubtitle2">
 				<input class="memberinput1" name="u_mail" readonly="readonly" autocomplete="off" 
-				value="${sessionScope.loginMember.u_mail }" maxlength="20">
+				value="${u_mailInfo }" maxlength="20">
 			</td>
 		</tr>
 		<tr>

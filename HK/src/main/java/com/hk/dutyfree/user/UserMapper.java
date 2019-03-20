@@ -8,5 +8,6 @@ public interface UserMapper {
 	public abstract int update(User u);
 	public abstract User getMemberById(User u);
 	public abstract int bye(User u);
+	public abstract int bye2(Passport p);
 	public abstract List<User> getAllMember();
 }

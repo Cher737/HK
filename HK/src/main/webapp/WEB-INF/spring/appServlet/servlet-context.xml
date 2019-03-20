@@ -45,6 +45,7 @@
 			<beans:list>
 				<beans:value>classpath:userMapper.xml</beans:value>
 				<beans:value>classpath:ProductMapper.xml</beans:value>
+				<beans:value>classpath:PointMapper.xml</beans:value>
 				
 			</beans:list>
 		</beans:property>

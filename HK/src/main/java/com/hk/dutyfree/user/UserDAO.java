@@ -2,6 +2,7 @@ package com.hk.dutyfree.user;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -45,32 +46,32 @@ public class UserDAO {
 		
 	public void join(User u, Passport p, HttpServletRequest request) {
 		try {
-			String u_pw = request.getParameter("u_pw");
-			String u_pwchk = request.getParameter("u_pwchk");
-			if (u_pwchk != u_pw) {
-				request.setAttribute("r", "회원가입에 실패했습니다.(비밀번호 체크)");
-			}
-			
+			request.setCharacterEncoding("utf-8");
+			// 메일분할입력 처리? 
 			String u_mail = String.format("%s=%s", request.getParameter("u_mail1"), 
 					request.getParameter("u_mail2"));
 			u.setU_mail(u_mail);
 			
+			// 주소분할입력 처리?
 			String u_addr = String.format("%s=%s=%s", request.getParameter("u_addr1"), 
 					request.getParameter("u_addr2"), request.getParameter("u_addr3"));
 			u.setU_addr(u_addr);
 			
+			// 가입시 0점처리
 			BigDecimal u_grade = new BigDecimal(0);
 			u.setU_grade(u_grade);
 			BigDecimal u_point = new BigDecimal(0);
 			u.setU_point(u_point);
 			
-			String pp_id = request.getParameter("u_id");
+			// 입력받지 않은 여권ID처리, 주민번호로 국적처리
+			String pp_id = u.getU_id();
 			p.setPp_id(pp_id);
-			String pp_nationality = String.format(request.getParameter("u_jumin").substring(6, 7)); 
+			String pp_nationality = String.format(u.getU_jumin().substring(6, 7)); 
 			if (pp_nationality.equals("1") || pp_nationality.equals("2")) {
 				p.setPp_nationality("대한민국");
 			}
 			
+			// 여권만료일 날짜처리
 			String pp_exp2 = request.getParameter("pp_exp2");
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 			p.setPp_exp(sdf.parse(pp_exp2));
@@ -140,6 +141,14 @@ public class UserDAO {
 		return false;
 	}
 	
+	public void Info(HttpServletRequest request) {
+			User u = (User) request.getSession().getAttribute("loginMember");
+			String u_birth = u.getU_jumin().substring(0,6);
+			request.setAttribute("u_birthInfo", u_birth);
+			String u_mail = u.getU_mail().replace("=", "@");
+			request.setAttribute("u_mailInfo", u_mail);
+	}
+	
 	public void update(User u, HttpServletRequest request) {
 		try {
 			u.setU_pw(request.getParameter("u_pw"));
@@ -173,6 +182,18 @@ public class UserDAO {
 			request.setAttribute("r", "탈퇴처리에 실패했습니다.");
 		}
 	}
+	public void bye2(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			Passport p = (Passport) request.getSession().getAttribute("loginMember");
+			if (ss.getMapper(UserMapper.class).bye2(p) == 1) {
+					request.setAttribute("r", "탈퇴 처리되었습니다.");
+					logout(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("r", "탈퇴처리에 실패했습니다.");
+		}
+	}
 	
 	public void divideAddr(HttpServletRequest request) {
 		User u = (User) request.getSession().getAttribute("loginMember");
@@ -189,5 +210,18 @@ public class UserDAO {
 		request.setAttribute("mail2", mail[1]);
 	}
 	
+//	public void mailInfo(HttpServletRequest request) {
+//		User u = (User) request.getSession().getAttribute("loginMember");
+//		String mail = u.getU_mail().replace("=", "@");
+//		request.setAttribute("mail", mail);
+//	}
+	
+	public Users idCheck(User u) {
+		User dbM = ss.getMapper(UserMapper.class).getMemberById(u);
+		ArrayList<User> al = new ArrayList<User>();
+		al.add(dbM);
+		Users us = new Users(al);
+		return us;
+	}
 	
 }

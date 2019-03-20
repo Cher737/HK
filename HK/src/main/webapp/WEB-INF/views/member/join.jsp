@@ -1,15 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html id="joinhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원가입</title>
 <link rel="stylesheet" href="resources/css/member.css">
+<script type="text/javascript" src="resources/js/jquery.js"></script>
+<script type="text/javascript" src="resources/js/summonInput.js"></script>
+<script type="text/javascript" src="resources/js/check.js"></script>
+<script type="text/javascript" src="resources/js/validCheck.js"></script>
+<script type="text/javascript" src="resources/js/go.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		connectSummonAddrInputEvent();
+		connectIdCheckEvent();
+		emailinput();
+	});
+</script>
 </head>
 <body id="joinbody">
 	<form action="join.do" method="post" name="joinForm" 
-		onsubmit="">
+		onsubmit="return joinCheck();">
 		<table id="jointable1">					
 			<tr>
 				<td colspan="3" align="center">
@@ -24,13 +37,13 @@
 			</tr>
 			<tr>
 				<td>
-					<input autocomplete="off" name="u_id" class="joininput2" placeholder="ID 영문또는 숫자 6~15자" maxlength="15">
-					&nbsp;<button id="joinidok">중복확인</button>
+					<input autocomplete="off" id="u_id" name="u_id" class="joininput2" placeholder="ID 영문또는 숫자 6~15자" maxlength="15" autofocus="autofocus">
+					&nbsp;<span id="joinIdOk">ID 확인</span>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input autocomplete="off" name="u_pw" class="joininput" type="password" placeholder="비밀번호 영문/숫자/특수문자조합 6~15자" maxlength="15">
+					<input autocomplete="off" name="u_pw" class="joininput" type="password" placeholder="비밀번호 영문/숫자조합 6~15자" maxlength="15">
 				</td>
 			</tr>
 			<tr>
@@ -53,14 +66,15 @@
 			</tr>
 			<tr>
 				<td class="jointable2td">
-					<input autocomplete="off" name="u_mail1" class="joininput3" placeholder="이메일 입력" maxlength="20"> @
-					<input autocomplete="off" name="u_mail2" class="joininput3" maxlength="11">
-					<select class="emailselect" name="emailcategory">
-						<option value="email1">naver.com</option>
-						<option value="email2">hanmail.net</option>
-						<option value="email3">nate.com</option>
-						<option value="email4">gmail.com</option>
-						<option value="email5">hotmail.com</option>
+					<input autocomplete="off" id="u_mail1" name="u_mail1" class="joininput3" placeholder="이메일 입력" maxlength="20"> @
+					<input autocomplete="off" id="u_mail2" name="u_mail2" class="joininput3" maxlength="11">
+					<select id="emailselect" class="emailselect" name="emailcategory">
+						<option value="">직접입력</option>
+						<option value="naver.com">naver.com</option>
+						<option value="daum.net">daum.net</option>
+						<option value="nate.com">nate.com</option>
+						<option value="gmail.com">gmail.com</option>
+						<option value="hotmail.com">hotmail.com</option>
 					</select>
 				</td>
 			</tr>
@@ -71,13 +85,13 @@
 			</tr>
 			<tr>
 				<td>
-					<input class="joinAddrNoinput" name="u_addr3" id="jm_addr3" placeholder="우편번호" maxlength="5" autocomplete="off">
+					<input readonly="readonly" class="joinAddrNoinput" name="u_addr3" id="u_addr3" placeholder="우편번호" maxlength="5" autocomplete="off">
 					&nbsp;<span id="joinAddrSearchBtn">검색</span>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<input class="joininput" name="u_addr1" id="jm_addr1" placeholder="주소" maxlength="50" autocomplete="off">
+					<input class="joininput" name="u_addr1" id="u_addr1" placeholder="주소" maxlength="50" autocomplete="off">
 				</td>
 			</tr>
 			<tr>
@@ -109,12 +123,16 @@
 				</td>
 			</tr>
 		</table>
-	
+		<p>
+		<p>
 		<table id="jointable4">
 			<tr>
+				<td>
+					<span id="gobackbutton">이전</span>
+				</td>
+			</tr>
+			<tr>
 				<td colspan="3" align="center">
-					<br>
-					<button id="gobackbutton">이전</button>
 					<button id="joinbutton">회원가입</button>
 				</td>
 			</tr>

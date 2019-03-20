@@ -6,6 +6,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원정보변경</title>
 <link rel="stylesheet" href="resources/css/member.css">
+<script type="text/javascript" src="resources/js/check.js"></script>
+<script type="text/javascript" src="resources/js/validCheck.js"></script>
+<script type="text/javascript" src="resources/js/summonInput.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		connectSummonEvent();
+		connectSummonAddrInputEvent();
+		emailinput();
+	});
+</script>
 </head>
 <body>
 	<table id="memberupdatetable" border="1">
@@ -26,7 +37,7 @@
 				<td class="updatesubtitle1">비밀번호</td>
 				<td class="updatesubtitle2">
 					<input class="memberupdateinput1" name="u_pw" type="password" placeholder="비밀번호 영문/숫자/특수문자조합 6~15자" 
-					value="${sessionScope.loginMember.u_pw }" maxlength="15" autocomplete="off">
+					value="${sessionScope.loginMember.u_pw }" maxlength="15" autocomplete="off" autofocus="autofocus">
 				</td>
 			</tr>
 			<tr>
@@ -53,14 +64,15 @@
 			<tr>
 				<td class="updatesubtitle1">이메일</td>
 				<td class="updatesubtitle2">
-					<input class="memberupdateinput3" autocomplete="off" name="u_mail1" value="${mail1 }" placeholder="이메일 입력" maxlength="20"> @
-					<input class="memberupdateinput2" autocomplete="off" name="u_mail2" value="${mail2 }" maxlength="11">
-					<select class="updateemailselect" name="updateemailcategory">
-						<option value="email1">naver.com</option>
-						<option value="email2">hanmail.net</option>
-						<option value="email3">nate.com</option>
-						<option value="email4">gmail.com</option>
-						<option value="email5">hotmail.com</option>
+					<input id="u_mail1" class="memberupdateinput3" autocomplete="off" name="u_mail1" value="${mail1 }" placeholder="이메일 입력" maxlength="20"> @
+					<input id="u_mail2" class="memberupdateinput2" autocomplete="off" name="u_mail2" value="${mail2 }" maxlength="11">
+					<select id="emailselect" class="updateemailselect" name="emailcategory">
+						<option value="">직접입력</option>
+						<option value="naver.com">naver.com</option>
+						<option value="daum.net">daum.net</option>
+						<option value="nate.com">nate.com</option>
+						<option value="gmail.com">gmail.com</option>
+						<option value="hotmail.com">hotmail.com</option>
 					</select>
 				</td>
 			</tr>
@@ -74,9 +86,9 @@
 			<tr>
 				<td class="updatesubtitle1">우편번호</td>
 				<td class="updatesubtitle2">
-					<input class="memberupdateAddrNoinput" name="u_addr3" id="u_addr3" 
+					<input readonly="readonly" class="memberupdateAddrNoinput" name="u_addr3" id="u_addr3" 
 					value="${addr3 }" autocomplete="off" placeholder="우편번호" maxlength="5">
-					&nbsp;<button id="updateAddrSearchBtn">검색</button>
+					&nbsp;<span id="updateAddrSearchBtn">검색</span>
 					
 				</td>
 			</tr>
@@ -96,8 +108,8 @@
 			</tr>
 			<tr>
 				<td align="center" colspan="2">
-					<button class="goBackBtn">이전</button>
-					<button class="updateOkBtn">정보수정</button>
+					<button class="goBackBtn" onclick="memberInfo();">이전</button>
+					<button class="updateOkBtn" onclick="memberUpdateDo();">정보수정</button>
 				</td>
 			</tr>
 		</table>

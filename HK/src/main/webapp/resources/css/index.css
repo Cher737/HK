@@ -10,14 +10,18 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
 #bodytable {
-	margin-left: 300px;
-	width: 1000px;
+	margin-left: 170px;
+	width: 80%;
 	height: 100%;
 	padding-top: 30px;
 }
-
+#titletable{
+	text-align:center;
+	width: 60%;
+	margin-left: 20%;
+	padding-top: 30px;
+}
 #titlelogotd {
 	width: 140px;
 	height: 80px;
@@ -35,7 +39,7 @@ body {
 	width: 500px;
 	height: 50px;
 	border: black solid 2px;
-	border-radius: 30px;
+		
 	
 }
 
@@ -52,12 +56,13 @@ body {
 #titlesearchimg {
 	width: 25px;
 	height: 25px;
-	padding-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #titlecarttd {
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-left: 160px;
+	padding-right: 160px;
 }
 
 #titlemypagetd {
@@ -82,6 +87,7 @@ body {
 	left: 0px;
 	height: 100%;
 	border-collapse: collapse;
+	z-index: 11;
 }
 
 .menu1 {
@@ -105,25 +111,31 @@ centerimgtd img {
 #subtable {
 	position: fixed;
 	top: 150px;
-	width: 4%;
-	border: solid 2px;
+	border: #E0E0E0 solid 1px;
 	font-size: 9pt;
-	left: 87%;
+	font-weight: 600;
+	opacity: 0.8;
+	border-collapse: collapse;
+	margin-left: 230px;
 }
-
+#subtable tr td{
+	border: #E0E0E0 solid 1px;
+	padding-top: 10px;
+	padding-bottom:10px;
+}
 .topimg {
 	width: 180px;
 	height: 180px;
 }
 
 .submenuimg {
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	height: 30px;
+	opacity: 0.8;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-.submenuimgdiv {
-	border: black solid 2px;
-}
 
 #categorymain {
 	font-weight: 1000;
@@ -159,7 +171,9 @@ centerimgtd img {
 	position: fixed;
 	border: black solid 1px;
 	width: 100px;
-	
+	top:0px;
+	left: 1300px;
+	opacity: 0;
 }
 .CATETABLE {
 	border: #E0E0E0 solid 1px;
@@ -171,6 +185,8 @@ centerimgtd img {
 	padding-left: 20px;
 	font-size: 10pt;
 	height:300px;
+	background-color: white;
+	z-index: 10;
 }
 .cates2{
 	height: 40px;
@@ -183,4 +199,67 @@ centerimgtd img {
 #catezero{
 	border-right: #E0E0E0 solid 1px;
 	height: 100%;
+}
+#moneyselect{
+	border: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 600;
+	font-size: 9pt;
+	padding: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align-last: center;
+	opacity: 0.8;
+}
+.todaymoneydiv{
+	color: red;
+}
+#top10table{
+	border-top: white solid 1px;
+	border-left: white solid 1px;
+	border-right: white solid 1px;
+	border-bottom: white solid 1px;
+	position: absolute;
+	z-index: 99;
+	background-color: white;
+	border-spacing: -1px;
+	margin-top: -1.5px;
+	margin-left: -1px;
+	width: 494px;
+	font-weight: 1000;
+	font-size: 10pt;
+}
+#titlesearchtable{
+	border-spacing: 0px;
+}
+.lankdiv{
+	width: 50px;
+	text-align: center;
+}
+.lankdiv1{
+	text-align: left;
+	width: 380px;
+}
+.lankdiv2{
+	text-align: center;
+	width: 50px;
+}
+#top10table tr td div{
+	float: left;
+	padding-top:10px;
+}
+
+#todaymoneyspan1{
+	color: red;
+}
+#todaymoneyspan2{
+	color: red;
+}
+#searchtitletd{
+	font-size: 13pt;
+	text-align: center;
+	color: #616161;
+	font-weight: 1000;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dutyfree.point.PointMapper">
+<insert id="inputPoint" parameterType="com.hk.dutyfree.point.Point">
+insert into hk_point values(
+hk_point_seq.nextval, #{pt_id},#{pt_txt},#{pt_point},#{pt_date},#{pt_code}
+) 
+</insert>
+
+
+</mapper>

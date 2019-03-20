@@ -18,4 +18,12 @@ public interface ProductMapper {
 	public abstract int DBwrite(Product pd);
 	
 	public abstract int DCwrite(Discount dc);
+
+	public abstract Integer searchlastcount(Search s);
+	
+	public abstract int searchupdate(Search s);
+	
+	public abstract int searchinsert(Search s);
+	
+	public abstract List<Search> selectlank();
 }

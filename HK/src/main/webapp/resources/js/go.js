@@ -19,8 +19,19 @@ function memberBye() {
 }
 
 function memberUpdate() {
-	location.href = "memberupdate";
+	location.href = "memberupdate.go";
 }
+
+function memberUpdateDo() {
+	location.href = "memberupdate.do";
+}
+
+function memberInfo() {
+	location.href = "memberinfo";
+}
+
+
+
 
 function msgSend(jcm_to) {
 	var jcm_txt = prompt("뭐");

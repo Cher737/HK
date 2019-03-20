@@ -1,9 +1,12 @@
 package com.hk.dutyfree.product;
 
 import java.math.BigDecimal;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -129,7 +132,25 @@ public class ProductDAO {
 			Products = ss.getMapper(ProductMapper.class).searchProduct(pds);
 
 			Products products2 = new Products(searchCount, Products);
-
+			Search s = new Search();
+			System.out.println("제목: " + name);
+			if( name != ""){
+				System.out.println("ㅋㅋㅋ");
+				s.setS_word(name);
+				BigDecimal b = null;
+				try {
+					int searchcount1 = ss.getMapper(ProductMapper.class).searchlastcount(s) + 1;
+					b = new BigDecimal(searchcount1);
+					s.setS_frequency(b);
+					ss.getMapper(ProductMapper.class).searchupdate(s);
+				} catch (Exception e){
+					e.printStackTrace();
+					s.setS_frequency(new BigDecimal(1));
+					ss.getMapper(ProductMapper.class).searchinsert(s);
+				}
+				
+			}
+			
 			return products2;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -140,9 +161,7 @@ public class ProductDAO {
 	public void WebCrolling() {
 		try {
 
-			Document d = Jsoup
-					.connect(
-							"http://www.dootadutyfree.com/dutyfree/goods/list/2/100/200100050002/view.do")
+			Document d = Jsoup.connect("http://www.dootadutyfree.com/dutyfree/goods/list/2/100/200100050002/view.do")
 					.execute().parse();
 			Product pd = new Product();
 			Random random = new Random();
@@ -156,10 +175,10 @@ public class ProductDAO {
 				pd.setP_img("http://www.dootadutyfree.com" + element.select("a img").attr("src"));
 				pd.setP_name(element.select(".title").text().replace("\r", "").replace("\n", ""));
 				// System.out.println(element.select(".orgPrice").text());;
-				if(element.select(".orgPrice").text().replace("$", "").replace(" ","").equals("")){
-					pd.setP_price(new BigDecimal(element.select(".Price").text().replace("$", "").replace(" ","")));
-				} else{
-					pd.setP_price(new BigDecimal(element.select(".orgPrice").text().replace("$", "").replace(" ","")));
+				if (element.select(".orgPrice").text().replace("$", "").replace(" ", "").equals("")) {
+					pd.setP_price(new BigDecimal(element.select(".Price").text().replace("$", "").replace(" ", "")));
+				} else {
+					pd.setP_price(new BigDecimal(element.select(".orgPrice").text().replace("$", "").replace(" ", "")));
 				}
 				pd.setP_categoryone("식품");
 				pd.setP_categorytwo("선호식품");
@@ -168,7 +187,7 @@ public class ProductDAO {
 				last = ss.getMapper(ProductMapper.class).lastProduct().getP_number();
 				ran = random.nextInt(2);
 				ran2 = random.nextInt(100) + 1;
-				if(ran == 0){
+				if (ran == 0) {
 					dc.setD_discount("y");
 					dc.setD_discountrate(new BigDecimal(ran2));
 					dc.setD_pnumber(last);
@@ -179,7 +198,7 @@ public class ProductDAO {
 					dc.setD_pnumber(last);
 					ss.getMapper(ProductMapper.class).DCwrite(dc);
 				}
-				
+
 			}
 
 		} catch (Exception e) {
@@ -187,4 +206,54 @@ public class ProductDAO {
 		}
 	}
 
+	public void MoneySession(HttpServletRequest req, HttpServletResponse res) {
+		try {
+			
+		
+		String select = req.getParameter("moneyselect");
+		select =  URLEncoder.encode(select, "UTF-8");
+
+		Cookie[] cookies = req.getCookies();
+		if (cookies != null && cookies.length > 0) {
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals("selectmoney")) {
+					if (cookie.getValue() != select) {
+						Cookie selectMoney = new Cookie("selectmoney", select);
+						res.addCookie(selectMoney);
+						selectMoney.setMaxAge(60 * 60 * 5);
+					} else {
+					}
+
+				} else{
+					Cookie selectMoney = new Cookie("selectmoney", select);
+					res.addCookie(selectMoney);
+					selectMoney.setMaxAge(60 * 60 * 5);
+				}
+			}
+
+		} else{
+			Cookie selectMoney = new Cookie("selectmoney", select);
+			res.addCookie(selectMoney);
+			selectMoney.setMaxAge(60 * 60 * 5);
+		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public Searchs getSearchJson(HttpServletRequest req, HttpServletResponse res) {
+		try {
+System.out.println("시작");
+			List<Search> s = ss.getMapper(ProductMapper.class).selectlank();
+			System.out.println(s.get(0).getS_word());
+			Searchs ss = new Searchs();
+			ss.setSearchs(s);
+			return ss;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 }

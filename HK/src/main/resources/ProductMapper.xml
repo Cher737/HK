@@ -53,4 +53,23 @@ hk_Product_seq.nextval,#{p_name},#{p_price},#{p_img},
 insert into hk_discount values(
 hk_discount_seq.nextval,#{d_pnumber},#{d_discount},#{d_discountrate})
 </insert>
+<select parameterType="com.hk.dutyfree.product.Search" id="searchlastcount" resultType="java.lang.Integer">
+select max(s_frequency) from hk_search
+where s_word = #{s_word}
+</select>
+<update id="searchupdate" parameterType="com.hk.dutyfree.product.Search">
+update hk_search set s_frequency = #{s_frequency} where s_word = #{s_word}
+</update>
+<insert id="searchinsert" parameterType="com.hk.dutyfree.product.Search">
+insert into hk_search values(
+hk_search_seq.nextval, #{s_word},#{s_frequency}
+)
+</insert>
+<select id="selectlank" resultType="com.hk.dutyfree.product.Search">
+select * from (
+select rownum as rm, s_word,s_frequency,s_number
+from (select * from hk_search order by s_frequency desc)
+) where rm &gt;= 1 and rm &lt;= 10
+order by rm
+</select>
 </mapper>

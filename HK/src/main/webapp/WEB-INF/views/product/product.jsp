@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품목록페이지</title>
 <link rel="stylesheet" href="resources/css/product.css">
-<script src="resources/js/jquery.js"></script>
 <script src="resources/js/Product.js"></script>
 </head>
 <body>
