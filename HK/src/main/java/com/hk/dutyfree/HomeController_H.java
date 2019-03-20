@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController_H {
 	
+	
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String Index(HttpServletRequest request) {
