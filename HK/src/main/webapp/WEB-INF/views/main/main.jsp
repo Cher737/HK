@@ -11,20 +11,10 @@
 	<table id="centerpage">
 		<tr>
 			<td id="centerimgtd">
-			<div class="bxslider">
+			<div align="center" class="bxslider">
 			<div>
 			<a href="Mypage.Buy">
-			<img src="resources/img/S10.jpg">
-			</a>
-			</div>
-			<div>
-			<a href="Mypage.Buy">
-			<img src="resources/img/S102.jpg">
-			</a>
-			</div>
-			<div>
-			<a href="Mypage.Buy">
-			<img src="resources/img/s102.png">
+			<img src="resources/img/HKPOINT2.png">
 			</a>
 			</div>
 			</div>

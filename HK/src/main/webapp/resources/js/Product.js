@@ -24,12 +24,56 @@ function page(p,url){
 			var p_price =p.p_price;
 			var p_img =	p.p_img;
 			var p_brand = p.p_brand;
-				
-			var tagp = $("<p>");
-				var div1 = $("<div></div>").text(p_brand).append(tagp).text(p_name);
-				var div2 = $("<div></div>").text(p_price);
+			var p_discountprice = p_price;
+			var todaymoney = $("#todaymoneyspan1").text().replace(",","");
+			
+			
+			if(p.d_discount == "y"){
+			var p_discountrate = p.d_discountrate;
+			var discount = (100 - p_discountrate) / 100;
+			p_discountprice = p_price * discount;
+			p_discountrate = p_discountrate + "% off";
+			p_price = $.number(p_price);
+			p_price = "$ " + p_price;
+			var p_price2 = p_discountprice * todaymoney;
+			} else{
+				var p_price2 = p_price * todaymoney;
+				p_price = "";
+			}
+			p_price2 = $.number(p_price2);
+			p_price2 = "(" +p_price2 + " " + $("select[name=moneyselect]").val().replace("(￦)","")
+			.replace("(￥)","").replace("(€)","").replace("(元)","") +")";
+			p_discountprice = p_discountprice+"";
+			if(p_discountprice.indexOf(".") != -1){
+				p_discountprice = $.number(p_discountprice,1);
+			} else{
+				p_discountprice = $.number(p_discountprice);
+			}
+			p_discountprice = "$"+p_discountprice;
+			
 				var img = $("<img>").attr("class","topimg").attr("src",p_img);
-				td[i] = $("<td></td>").attr("class","producttd").append(img,div1,div2);
+				var intd1 = $("<td></td>").append(img).attr("colspan","2").attr("align","center").attr("class","inimgtd");
+				var intd2 = $("<td></td>").text(p_brand).attr("class","brandtd").attr("colspan","2");
+				var intd3 = $("<td></td>").text(p_name).attr("class","nametd").attr("colspan","2");
+				var span1 = $("<span></span>").text(p_price).attr("class","pricespan");
+				var span2 = $("<span></span>").text(p_discountrate).attr("class","discountratespan");
+				var intd4 = $("<td></td>").append(span1,span2).attr("class","pricetd").attr("colspan","2");
+				var span3 = $("<span></span>").text(p_discountprice).attr("class","discountpricespan");
+				var span4 = $("<span></span>").text(p_price2).attr("class","price2span");
+				var intd5 = $("<td></td>").append(span3,span4).attr("class","discountpricetd").attr("colspan","2");
+				
+				var carttd = $("<td></td>").attr("class","carttd").text("장바구니");
+				var buytd = $("<td></td>").attr("class","buytd").text("바로구매");
+				
+				var intr1 = $("<tr></tr>").append(intd1);
+				var intr2 = $("<tr></tr>").append(intd2);
+				var intr3 = $("<tr></tr>").append(intd3);
+				var intr4 = $("<tr></tr>").append(intd4);
+				var intr5 = $("<tr></tr>").append(intd5);
+				var intr6 = $("<tr></tr>").append(carttd,buytd);
+				var intable = $("<table></table>").append(intr1,intr2,intr3,intr4,intr5,intr6).attr("class","inproducttable");
+				
+				td[i] = $("<td></td>").attr("class","producttd").append(intable);
 			});
 		
 		
@@ -142,11 +186,6 @@ function Catego(){
 		$(".categoryone").val(categoriones).prop("selected", true);
 		Category()
 }
-function Catego2(){
-	
-
-}
-
 
 function Category(){
 	
@@ -251,7 +290,16 @@ $(function() {
 		location.href = "product?categoryone="+categoryone+"&categorytwo="+categorytwo;
 	});
 	
+	$(document).on("mouseenter",".inproducttable",function() {
+		$(this).css("border","#666666 solid 1px");
+		$(this).find(".carttd").css("opacity","1").css("border-top","#666666 solid 1px").css("border-right","#666666 solid 1px");
+		$(this).find(".buytd").css("opacity","1").css("border-top","#666666 solid 1px");
+	});
+	$(document).on("mouseleave",".inproducttable",function() {
+		$(this).css("border","white solid 1px");
+		$(this).find(".carttd").css("opacity","0").css("border-top","white solid 1px").css("border-right","white solid 1px");
+		$(this).find(".buytd").css("opacity","0").css("border-top","white solid 1px");
+	});
 	
-
 });
 

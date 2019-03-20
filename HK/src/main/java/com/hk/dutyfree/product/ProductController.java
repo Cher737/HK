@@ -44,8 +44,11 @@ public class ProductController {
 	
 	@RequestMapping(value = "/product.json", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	public @ResponseBody Products paging(HttpServletRequest request, HttpServletResponse response) {
-		
 			return PDAO.searchJson(request, response);
+	}
+	@RequestMapping(value = "/product.json2", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	public @ResponseBody Products paging2(HttpServletRequest request, HttpServletResponse response) {
+		return PDAO.getpageJson(request, response);
 	}
 	
 	@RequestMapping(value = "/product.insert", method = RequestMethod.GET)
@@ -53,5 +56,16 @@ public class ProductController {
 		PDAO.WebCrolling();
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
+	}
+	@RequestMapping(value = "/SelectMoney.go", method = RequestMethod.POST)
+	public String SelectMoney(HttpServletRequest request,HttpServletResponse response) {
+		PDAO.MoneySession(request, response);
+		request.setAttribute("centerpage", "main/main.jsp");
+		return "index";
+	}
+	
+	@RequestMapping(value = "/lank.top", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	public @ResponseBody Searchs lank(HttpServletRequest request, HttpServletResponse response) {
+		return PDAO.getSearchJson(request, response);
 	}
 }
