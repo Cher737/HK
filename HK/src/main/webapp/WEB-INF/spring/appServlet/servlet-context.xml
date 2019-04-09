@@ -46,6 +46,9 @@
 				<beans:value>classpath:userMapper.xml</beans:value>
 				<beans:value>classpath:ProductMapper.xml</beans:value>
 				<beans:value>classpath:PointMapper.xml</beans:value>
+				<beans:value>classpath:rateMapper.xml</beans:value>
+				<beans:value>classpath:specialMapper.xml</beans:value>
+				<beans:value>classpath:passportMapper.xml</beans:value>
 				
 			</beans:list>
 		</beans:property>

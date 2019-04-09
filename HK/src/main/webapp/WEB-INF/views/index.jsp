@@ -12,12 +12,18 @@
 <script src="resources/js/jquery.number.js"></script>
 <script src="resources/js/go.js"></script>
 <script src="resources/js/index.js"></script>
+<script src="resources/js/check.js"></script>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script
 	src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="http://lab.alexcican.com/set_cookies/cookie.js"
 	type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		rateinput();
+	});
+</script>
 </head>
 <body>
 	<table id="maintable">
@@ -117,7 +123,7 @@
 											<img src="resources/img/coin.png" class="submenuimg">
 										</div> 금일 환율
 										<div id="todaymoneydiv">
-											<span id="todaymoneyspan1">1136.1</span><span
+											<span id="todaymoneyspan1">${rateResult.er_rate }</span><span
 												id="todaymoneyspan2"></span>
 										</div></td>
 								</tr>

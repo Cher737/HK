@@ -43,6 +43,21 @@ function emailinput() {
 	});
 }
 
+// 환율값 가져오기
+function rateinput() {
+//	var select = $("select[name=moneyselect]").val();
+	var select = $("select[name=moneyselect]").val();
+	
+	$.ajax({
+		type:"post",
+		url : "SelectRate.go",
+		data:{"rateselect" : select},
+		success : function(Rdata){
+			
+		}
+	})
+}
+
 function joinCheck() {
 	var u_id = document.joinForm.u_id;
 	var u_pw = document.joinForm.u_pw;
@@ -122,49 +137,54 @@ function joinCheck() {
 }
 
 function updateMemberCheck() {
-	var jm_id = document.updateForm.jm_id;
-	var jm_pw = document.updateForm.jm_pw;
-	var jm_pwChk = document.updateForm.jm_pwChk;
-	var jm_name = document.updateForm.jm_name;
-	var jm_addr1 = document.updateForm.jm_addr1;
-	var jm_addr2 = document.updateForm.jm_addr2;
-	var jm_addr3 = document.updateForm.jm_addr3;
-	var jm_photo = document.updateForm.jm_photo;
-	if (isEmpty(jm_id) || containsHS(jm_id)) {
-		alert("!");
-		jm_id.value = "";
-		jm_id.focus();
+	var u_pw = document.updateForm.u_pw;
+	var u_pwChk = document.updateForm.u_pwChk;
+	var u_name = document.updateForm.u_name;
+	var u_jumin = document.updateForm.u_jumin;
+	var u_mail1 = document.updateForm.u_mail1;
+	var u_mail2 = document.updateForm.u_mail2;
+	var u_phone = document.updateForm.u_phone;	
+	var u_addr1 = document.updateForm.u_addr1;
+	var u_addr2 = document.updateForm.jm_addr2;
+	var u_addr3 = document.updateForm.jm_addr3;
+	
+	if (isEmpty(u_pw) || notEquals(u_pw, u_pwChk)
+			|| notContains(u_pw, "1234567890")
+			|| notContains(u_pw, "qwertyuiopasdfghjklzxcvbnm")) {
+		alert("비밀번호를 확인하세요!");
+		u_pw.value = "";
+		u_pwChk.value = "";
+		u_pw.focus();
 		return false;
-	} else if (isEmpty(jm_pw) || notEquals(jm_pw, jm_pwChk)
-			|| notContains(jm_pw, "1234567890")
-			|| notContains(jm_pw, "qwertyuiopasdfghjklzxcvbnm")) {
-		alert("!");
-		jm_pw.value = "";
-		jm_pwChk.value = "";
-		jm_pw.focus();
+	} else if (isEmpty(u_name)) {
+		alert("이름을 확인하세요!");
+		u_name.value = "";
+		u_name.focus();
 		return false;
-	} else if (isEmpty(jm_name)) {
-		alert("!");
-		jm_name.value = "";
-		jm_name.focus();
+	} else if (isEmpty(u_jumin) || isNotNumber(u_jumin)) {
+		alert("주민등록번호를 확인하세요!");
+		u_jumin.value = "";
+		u_jumin.focus();
 		return false;
-	} else if (isEmpty(jm_addr1) || isEmpty(jm_addr2) || isEmpty(jm_addr3)) {
-		alert("!");
-		jm_addr1.value = "";
-		jm_addr2.value = "";
-		jm_addr3.value = "";
-		jm_addr1.focus();
+	} else if (isEmpty(u_mail1) || isEmpty(u_mail2)) {
+		alert("이메일를 확인하세요!");
+		u_mail1.value = "";
+		u_mail2.value = "";
+		u_mail1.focus();
 		return false;
-	} else if (isEmpty(jm_photo)) {
-		return true;
-	} else if (isNotType(jm_photo, "png") && isNotType(jm_photo, "jpg")
-			&& isNotType(jm_photo, "gif") && isNotType(jm_photo, "bmp")
-			&& isNotType(jm_photo, "jpeg")) {
-		alert("!");
-		jm_photo.value = "";
+	} else if (isEmpty(u_phone) || isNotNumber(u_phone)) {
+		alert("휴대전화 번호를 확인하세요!");
+		u_phone.value = "";
+		u_phone.focus();
 		return false;
-	}
-
+	} else if (isEmpty(u_addr1) || isEmpty(u_addr2) || isEmpty(u_addr3)) {
+		alert("주소를 확인하세요!");
+		u_addr1.value = "";
+		u_addr2.value = "";
+		u_addr3.value = "";
+		u_addr1.focus();
+		return false;
+	} 
 	return true;
 }
 

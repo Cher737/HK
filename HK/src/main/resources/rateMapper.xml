@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dutyfree.rate.RateMapper">
+	
+	<insert id="insertRate" parameterType="com.hk.dutyfree.rate.Rate">
+		insert into exchange_rate
+		values(exchange_rate_seq.nextval, sysdate, #{er_rate}, #{er_country})
+	</insert>
+	<select id="getRate" parameterType="com.hk.dutyfree.rate.Rate" resultType="com.hk.dutyfree.rate.Rate">
+		select * from exchange_rate
+			where er_number = (
+				select max(er_number)
+					from (
+						select *
+						from (
+							select * 
+							from exchange_rate
+								where er_country = #{er_country}
+								order by er_date desc
+						)
+					) 
+			)
+	</select>
+	
+</mapper>

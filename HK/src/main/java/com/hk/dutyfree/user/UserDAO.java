@@ -141,8 +141,10 @@ public class UserDAO {
 		return false;
 	}
 	
-	public void Info(HttpServletRequest request) {
+	public void Info(Passport p, HttpServletRequest request) {
 			User u = (User) request.getSession().getAttribute("loginMember");
+			String pp_nationality = p.getPp_nationality();
+			request.setAttribute("pp_nationality", pp_nationality);
 			String u_birth = u.getU_jumin().substring(0,6);
 			request.setAttribute("u_birthInfo", u_birth);
 			String u_mail = u.getU_mail().replace("=", "@");
