@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dutyfree.product.SpecialMapper">
+	<select id="getSailProducts" parameterType="com.hk.dutyfree.product.Productno" resultType="com.hk.dutyfree.product.Product">
+		select * from (
+			select rownum as rm, p_number, p_name, p_price,p_img,p_categoryone,p_categorytwo,p_brand,p_gender,p_avgscore,d_discount,d_discountrate
+				from (select * from hk_Product,hk_discount where p_number=d_pnumber order by d_discountrate desc)
+				) where rm &gt;= #{start} and rm &lt;= #{end}
+			order by rm
+	</select>
+	
+	
+
+</mapper>

@@ -1,119 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>	
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/product.css">
+<script src="resources/js/mainpageProduct.js"></script>
 </head>
 <body>
-<table id="TopmainTable">
-	<tr>
-	<tr>
-<td>
-<h2>실시간 할인 상품</h2>
-</td>
-</tr>
-</table>
-<table id="Topproducttable">
-<tr>
+	<table id="TopmainTable">
+		<tr>
 	<td>
-	
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/02/25/33/02/00/01/10002332502_02.jpg/dims/resize/130x130">
-			<div>
-				밍크알레팡
-				<p>Mink ELEPANG
-				<p>밍크알레팡토름이
-			</div>
-			<div>17.5$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/07/47/17/02/00/01/10002174707_01.jpg/dims/resize/130x130">
-			<div>
-				연우
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>39,9$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/66/64/49/00/00/02/20000496466_1.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/57/97/08/03/00/01/10003089757_3.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/15/43/38/00/00/02/20000384315_1.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div>
-</td>
+	<h2>실시간 할인 상품</h2>
+	</td>
 	</tr>
-	<tr>
-	<td>
-	
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/01/87/32/02/00/01/10002328701_3.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/81/36/28/02/00/01/10002283681_3.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/66/64/49/00/00/02/20000496466_1.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/57/97/08/03/00/01/10003089757_3.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div></td>
-			<td>
-		<img class="topimg"
-			src="http://static.lottedfs.com/prod/prd-img/15/43/38/00/00/02/20000384315_1.jpg/dims/resize/180x180">
-			<div>
-				태그호이어
-				<p>TAG HEUER
-				<p>FORMULA 1
-			</div>
-			<div>1,450$</div>
-</td>
-	</tr>
+	</table>
+
+	<table class="producttable1">
+		<tr id="producttr1">
+			<c:forEach var="spd" items="${spds}" begin="0" end="4">
+			<!-- 배열(진짜 for-each)을 원하면 items -->
+				<td class="producttd">
+					<table class="inproducttable">
+						<tr><td class="inimgtd" colspan="2" align="center"><img class="topimg" src="${spd.p_img }"><td></tr>
+						<tr><td class="brandtd" colspan="2">${spd.p_brand }</td></tr>
+						<tr><td class="nametd" colspan="2">${spd.p_name }</td></tr>
+						<tr><td class="pricetd" colspan="2"><span class="pricespan">${spd.p_price }</span><span class="discountratespan">${spd.d_discountrate }% off</span></td></tr>
+						<tr><td class="discountpricetd" colspan="2"><span class="discountpricespan"></span><span class="price2span"></span></td></tr>
+						<tr><td class="carttd">장바구니</td><td class="buytd">바로구매</td></tr>
+					</table>
+				</td>
+			</c:forEach>
+		</tr>
+	</table>
+	<table class="producttable2">
+		<tr id="producttr2">
+			<c:forEach var="spd" items="${spds}" begin="5" end="9">
+				<td class="producttd">
+					<table class="inproducttable">
+						<tr><td class="inimgtd" colspan="2" align="center"><img class="topimg" src="${spd.p_img }"><td></tr>
+						<tr><td class="brandtd" colspan="2">${spd.p_brand }</td></tr>
+						<tr><td class="nametd" colspan="2">${spd.p_name }</td></tr>
+						<tr><td class="pricetd" colspan="2"><span class="pricespan">${spd.p_price }</span><span class="discountratespan">${spd.d_discountrate }% off</span></td></tr>
+						<tr><td class="discountpricetd" colspan="2"><span class="discountpricespan"></span><span class="price2span"></span></td></tr>
+						<tr><td class="carttd">장바구니</td><td class="buytd">바로구매</td></tr>
+					</table>
+				</td>
+			</c:forEach>
+		</tr>
 	</table>
 </body>
 </html>

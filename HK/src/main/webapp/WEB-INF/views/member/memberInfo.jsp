@@ -24,8 +24,11 @@
 		<tr>
 			<td class="infosubtitle1">이름 / 국적</td>
 			<td class="infosubtitle2">
-				<input class="memberinput2" name="u_name" readonly="readonly" 
+				<input class="memberinput3" name="u_name" readonly="readonly" 
 				value="${sessionScope.loginMember.u_name }" maxlength="15" autocomplete="off">
+				<input class="memberinput4" value="/" readonly="readonly">
+				<input class="memberinput3" name="pp_nationality" readonly="readonly" 
+				value="${pp_nationality }" maxlength="15" autocomplete="off">
 			</td>
 		</tr>
 		<tr>
