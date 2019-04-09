@@ -14,7 +14,7 @@ create table hk_user(
 	u_gradedate date not null,
 	u_point number(7) not null
 );
-delete from hk_user where u_id='test';
+delete from hk_user where u_id='test44';
 -----
 select * from passport;
 create table passport(
@@ -24,4 +24,4 @@ create table passport(
 	pp_nationality varchar2(20 char) not null,
 	pp_engname varchar2(30 char) not null
 );
-delete from passport where pp_pnumber='M12345678';
+delete from passport where pp_id='test44';

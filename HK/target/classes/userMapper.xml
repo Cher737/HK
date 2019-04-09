@@ -29,5 +29,9 @@
 		delete from hk_user where
 		u_id=#{u_id}
 	</delete>
+	<delete id="bye2" parameterType="com.hk.dutyfree.user.Passport">
+		delete from passport where
+		pp_id=#{pp_id}
+	</delete>
 
 </mapper>

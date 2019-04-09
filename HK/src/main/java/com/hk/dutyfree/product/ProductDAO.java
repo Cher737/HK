@@ -133,9 +133,7 @@ public class ProductDAO {
 
 			Products products2 = new Products(searchCount, Products);
 			Search s = new Search();
-			System.out.println("제목: " + name);
 			if( name != ""){
-				System.out.println("ㅋㅋㅋ");
 				s.setS_word(name);
 				BigDecimal b = null;
 				try {
@@ -244,9 +242,7 @@ public class ProductDAO {
 	
 	public Searchs getSearchJson(HttpServletRequest req, HttpServletResponse res) {
 		try {
-System.out.println("시작");
 			List<Search> s = ss.getMapper(ProductMapper.class).selectlank();
-			System.out.println(s.get(0).getS_word());
 			Searchs ss = new Searchs();
 			ss.setSearchs(s);
 			return ss;
