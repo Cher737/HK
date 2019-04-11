@@ -2,18 +2,15 @@ function page(p,url){
 	var categoryone = $("select[name=categoryone]").val();
 	var categorytwo = $("select[name=categorytwo]").val();
 	
-	 
-	 
-	   
 	
 	if(categorytwo ==""){
 		$(".categorytitle").text(categoryone);
 	} else{
 		$(".categorytitle").text(categorytwo);
 	}
-	$(".producttable1").empty();
-	$(".producttable2").empty();
-	$(".producttable3").empty();
+	for (var i = 0; i < 15; i++) {
+		$("#producttd"+i).empty();
+	}
 	$.getJSON(url, function(data){
 		var products = data.products;
 		var allCount = data.allCount;
@@ -25,9 +22,8 @@ function page(p,url){
 			var p_img =	p.p_img;
 			var p_brand = p.p_brand;
 			var p_discountprice = p_price;
+			var p_number = p.p_number;
 			var todaymoney = $("#todaymoneyspan1").text().replace(",","");
-			
-			
 			if(p.d_discount == "y"){
 			var p_discountrate = p.d_discountrate;
 			var discount = (100 - p_discountrate) / 100;
@@ -61,9 +57,9 @@ function page(p,url){
 				var span3 = $("<span></span>").text(p_discountprice).attr("class","discountpricespan");
 				var span4 = $("<span></span>").text(p_price2).attr("class","price2span");
 				var intd5 = $("<td></td>").append(span3,span4).attr("class","discountpricetd").attr("colspan","2");
-				
-				var carttd = $("<td></td>").attr("class","carttd").text("장바구니");
-				var buytd = $("<td></td>").attr("class","buytd").text("바로구매");
+				var bobo = p_number;
+				var carttd = $("<td></td>").attr("class","carttd").text("장바구니").attr("id",bobo);
+				var buytd = $("<td></td>").attr("class","buytd").text("바로구매").attr("id",bobo);
 				
 				var intr1 = $("<tr></tr>").append(intd1);
 				var intr2 = $("<tr></tr>").append(intd2);
@@ -73,17 +69,10 @@ function page(p,url){
 				var intr6 = $("<tr></tr>").append(carttd,buytd);
 				var intable = $("<table></table>").append(intr1,intr2,intr3,intr4,intr5,intr6).attr("class","inproducttable");
 				
-				td[i] = $("<td></td>").attr("class","producttd").append(intable);
+				$("#producttd"+i).append(intable);
 			});
 		
-		
-		
-			var tr = $("<tr></tr>").attr("id","producttr1").append(td[0],td[1],td[2],td[3],td[4]);
-			$(".producttable1").append(tr);
-			var tr = $("<tr></tr>").attr("id","producttr2").append(td[5],td[6],td[7],td[8],td[9]);
-			$(".producttable2").append(tr);
-			var tr = $("<tr></tr>").attr("id","producttr3").append(td[10],td[11],td[12],td[13],td[14]);
-			$(".producttable3").append(tr);
+			
 			
 			if(allCount > 15){
 				var page = allCount / 15;
@@ -169,10 +158,10 @@ function checkbox(p,name){
 		discount = "y";
 		search = 1;
 	}
-	
-	var url = "product.json?"+p+"&search="+search+ "&name="+name+"&gender="+gender+
+	var searchname = $("#titlesearch").val();
+	var url = "product.json?"+p+"&search="+search+ "&name="+searchname+"&gender="+gender+
 	"&pricemin="+pricemin+"&pricemax="+pricemax+"&discount="+discount+
-	"&categoryone="+categoryone +"&categorytwo="+categorytwo ;
+	"&categoryone="+categoryone +"&categorytwo="+categorytwo+"&searchname="+name;
 	
 	Category();
 	page(p,url);
@@ -181,8 +170,9 @@ function checkbox(p,name){
 
 function Catego(){
 	var urlParams = new URLSearchParams(window.location.search);
+	var name = urlParams.get('name');
 		var categoriones = urlParams.get('categoryone');
-		
+		$("#titlesearch").val(name);
 		$(".categoryone").val(categoriones).prop("selected", true);
 		Category()
 }
@@ -265,7 +255,7 @@ $(function() {
 		
 	});
 	$(document).on("click",".pagecount",function(){
-		
+		$(window).scrollTop(180);
 		p = $(this).attr('id');
 
 		checkbox(p);
@@ -301,5 +291,18 @@ $(function() {
 		$(this).find(".buytd").css("opacity","0").css("border-top","white solid 1px");
 	});
 	
+	$(document).on("click",".carttd",function(){
+		var productnumber = $((this)).attr("id");
+		
+		$.ajax({
+			type:"get",
+			url : "inputbucket",
+			data:{"p_number" : productnumber},
+			success : function(data){
+				alert("장바구니에 상품을 넣었습니다.")
+			}
+	});
+	
+	});
 });
 

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hk.dutyfree.product.ProductDAO;
+import com.hk.dutyfree.rate.rateDAO;
 
 
 @Controller
@@ -23,6 +24,12 @@ public class ProductController {
 	@Autowired
 	private ProductDAO PDAO; 
 	
+	@Autowired
+	private rateDAO rDAO; 
+	
+	@Autowired
+	private SpecialDAO spDAO;
+	
 	private boolean firstReq;
 	
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
@@ -32,6 +39,7 @@ public class ProductController {
 			firstReq = false;
 		}
 		PDAO.PageCount(request, response);
+		rDAO.getRate(request);
 		request.setAttribute("centerpage", "product/product.jsp");
 		return "index";
 	}
@@ -39,6 +47,7 @@ public class ProductController {
 	@RequestMapping(value = "/product.detail", method = RequestMethod.GET)
 	public String product2(HttpServletRequest request) {
 		request.setAttribute("centerpage", "product/productdetail.jsp");
+		rDAO.getRate(request);
 		return "index";
 	}
 	
@@ -54,12 +63,14 @@ public class ProductController {
 	@RequestMapping(value = "/product.insert", method = RequestMethod.GET)
 	public String home(HttpServletRequest request) {
 		PDAO.WebCrolling();
+		spDAO.getSailProducts(request);
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
 	}
 	@RequestMapping(value = "/SelectMoney.go", method = RequestMethod.POST)
 	public String SelectMoney(HttpServletRequest request,HttpServletResponse response) {
 		PDAO.MoneySession(request, response);
+		spDAO.getSailProducts(request);
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
 	}

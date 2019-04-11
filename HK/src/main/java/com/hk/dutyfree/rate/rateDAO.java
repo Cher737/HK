@@ -109,7 +109,12 @@ public class rateDAO {
 							request.setAttribute("rateResult", rt);
 						}
 						
-					} 
+					} else{
+						Rate rt = new Rate();
+						rt.setEr_country("KR");
+						rt = ss.getMapper(RateMapper.class).getRate(rt);
+						request.setAttribute("rateResult", rt);
+					}
 				}
 				
 			}
@@ -123,4 +128,11 @@ public class rateDAO {
 //	public void insertRate(Rate rt, HttpServletRequest request) {
 //	}
 	
+	public void buypageRate (HttpServletRequest req){
+		Rate rt = new Rate();
+		rt.setEr_country("KR");
+		rt = ss.getMapper(RateMapper.class).getRate(rt);
+		
+		req.setAttribute("rateResult", rt);
+	}
 }

@@ -168,12 +168,21 @@ centerimgtd img {
 	width: 50px;
 }
 #Mymenutable1{
-	position: fixed;
+	position: absolute;
 	border: black solid 1px;
 	width: 100px;
-	top:0px;
+	top: -200px;
 	left: 1300px;
 	opacity: 0;
+	z-index: 90;
+	background-color: white;
+	text-align: center;
+}
+#Mymenutable1 tr td{
+	padding: 5px;
+}
+#mypageimg:hover{
+	cursor: pointer;
 }
 .CATETABLE {
 	border: #E0E0E0 solid 1px;
@@ -263,3 +272,7 @@ centerimgtd img {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+A:link    {color:black;text-decoration:none; font-weight: 800;} /* 아직 방문하지 않은경우 */
+A:visited {color:black; text-decoration:none;font-weight: 800; } /* 한번 이상 방문한 링크 처리 */
+A:active  {color:black; text-decoration:none; font-weight: 800;}/* 마우스로 클릭하는 순간 */
+A:hover  {color:black; text-decoration:none; font-weight: 800;} /* 마우스 링크 위 올려 놓았을때 */

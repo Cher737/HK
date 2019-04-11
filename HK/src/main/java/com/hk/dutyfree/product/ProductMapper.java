@@ -26,4 +26,9 @@ public interface ProductMapper {
 	public abstract int searchinsert(Search s);
 	
 	public abstract List<Search> selectlank();
+	
+	public abstract Product numberselect(Product pd);
+	
+	public abstract int productcount(Product pd);
+	
 }

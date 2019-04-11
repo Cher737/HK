@@ -18,7 +18,8 @@ select rownum as rm, p_number, p_name, p_price,p_img,p_categoryone,p_categorytwo
 from (select * from hk_Product,hk_discount 
 where p_number=d_pnumber and p_price &gt;= #{p_pricemin} 
 and p_price &lt; #{p_pricemax} 
-and p_name like '%'||#{p_name}||'%' 
+and (p_name like '%'||#{p_name}||'%' or p_brand like '%'||#{p_name}||'%')
+and (p_name like '%'||#{p_searchname}||'%' or p_brand like '%'||#{p_searchname}||'%')
 and p_gender like '%'||#{p_gender}||'%' 
 and d_discount like '%'||#{d_discount}||'%' 
 and p_categoryone like '%'||#{p_categoryone}||'%' 
@@ -33,7 +34,8 @@ select rownum as rm, p_number, p_name, p_price,p_img,p_categoryone,p_categorytwo
 from (select * from hk_Product,hk_discount 
 where p_number=d_pnumber and p_price &gt;= #{p_pricemin} 
 and p_price &lt; #{p_pricemax} 
-and p_name like '%'||#{p_name}||'%' 
+and (p_name like '%'||#{p_name}||'%' or p_brand like '%'||#{p_name}||'%')
+and (p_name like '%'||#{p_searchname}||'%' or p_brand like '%'||#{p_searchname}||'%') 
 and p_gender like '%'||#{p_gender}||'%' 
 and d_discount like '%'||#{d_discount}||'%' 
 and p_categoryone like '%'||#{p_categoryone}||'%' 
@@ -72,4 +74,13 @@ from (select * from hk_search order by s_frequency desc)
 ) where rm &gt;= 1 and rm &lt;= 10
 order by rm
 </select>
+<select id="numberselect" parameterType="com.hk.dutyfree.product.Product" resultType="com.hk.dutyfree.product.Product">
+select * from hk_Product,hk_discount 
+where p_number=d_pnumber and p_number= #{p_number}
+</select>
+<update id="productcount" parameterType="com.hk.dutyfree.product.Product">
+update hk_Product
+set p_avgscore = #{p_avgscore}
+where p_number = #{p_number}
+</update>
 </mapper>

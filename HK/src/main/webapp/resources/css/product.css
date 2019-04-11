@@ -124,11 +124,6 @@ label{
 	color:#2979FF;
 	border:#2979FF solid 2px;
 }
-.producttable1,.producttable2,.producttable3{
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-}
 .producttable1{
 	top: 100px;
 }
@@ -144,6 +139,7 @@ label{
 }
 .producttd{
 	border: white solid 2px;
+	width: 200px;
 }
 
 
@@ -259,49 +255,68 @@ label{
 
 /*	이하 장바구니페이지		*/
 
+#bucketbodytable{
+	width: 1000px;
+}
+
+#buckectlisttable{
+	width: 600px;
+}
+
 #buckettable{
 	width: 1000px;
 	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 800;
+	margin-bottom: 10px;
 }
-.buckettitle{
+.pageTitle{
 	padding-left: 15px;
 	font-size: 25pt;
 	font-weight: 800;
+	padding-bottom: 10px;
 }
 .bucketlist{
 	margin-right: 15px;
-	margin-bottom: 15px;
-	width: 580px;
-	height: 150px;
+	margin-bottom: 25px;
+	width: 600px;
+	height: 120px;
 	border-spacing: 0px;
-	border-top: #E0E0E0 solid 2px;
-	border-bottom: #E0E0E0 solid 2px;
-	border-left: #E0E0E0 solid 2px;
-	border-right: #E0E0E0 solid 2px;
+	border-top: #E0E0E0 solid 1px;
+	border-bottom: #E0E0E0 solid 1px;
+	border-left: #E0E0E0 solid 1px;
+	border-right: #E0E0E0 solid 1px;
 }
 .bucketproductname{
-	font-size: 15pt;
-	font-weight: 800;
-	padding-left: 20px;
-	width: 70%;
-	border-bottom: #E0E0E0 solid 2px;
-}
-.bucketdeletetd{
-	border-bottom: #E0E0E0 solid 2px;
-}
-.bucketproductprice{
 	font-size: 13pt;
 	font-weight: 800;
+	padding-left: 20px;
+	width: 90%;
+	border-bottom: #E0E0E0 solid 1px;
+}
+.bucketdeletetd{
+	border-bottom: #E0E0E0 solid 1px;
+	height: 40px;
+	padding-right: 10px;
+}
+.bucketproductprice{
+	text-decoration: line-through;
+	color: #616161;
+	font-size: 11pt;
+	font-weight: 800;
+	width: 70px;
+	text-align: center;
 }
 .bucketdeletebtn{
-	font-size:12pt;
+	font-size:10pt;
 	font-weight: 800;
 	cursor:pointer;
 	outline:none;
 	border:none;
 	background: #EF5350;
 	color: white;
-	width: 70px;
+	width: 50px;
 	height: 30px;
 }
 .bucketproductnumber{
@@ -313,9 +328,12 @@ label{
 	font-weight: 800;
 }
 .estimatedpurchasetable{
+	position: fixed;
+	top: 315px;
+	left: 950px;
 	border: none;
 	border-spacing: 0px;
-	width: 400px;
+	width: 350px;
 	height: 315px;
 	background-color: #E3F2FD55;
 }
@@ -432,4 +450,69 @@ color: gray;
 .inimgtd{
 	width: 200px;
 	height: 200px;
+}
+.bucketproductimg{
+	width: 150px;
+	height: 150px;
+}
+
+.Bucketpricemenutd, .Bucketdiscountratemenutd, .Bucketdiscountpricemenutd, .Bucketselectcountmenutd{
+	width: 100px;
+	text-align: center;
+	font-size: 12px;
+	border-bottom: #E0E0E0 solid 1px;
+}
+.bucketcheckboxtd{
+	width: 50px;
+}
+
+.bucketproductimgtd{
+	width: 160px;
+}
+
+.bucketdiscountratetd{
+	text-align: center;
+	font-weight: 1000;
+	font-size: 11pt;
+	color: #424242;
+}
+.bucketdiscountpricediv1{
+	font-weight: 1000;
+	font-size: 13pt;
+	color: red;
+	text-align: center;
+}
+.bucketdiscountpricediv2{
+	font-weight: 1000;
+	font-size: 10pt;
+	text-align: center;
+	color: #424242;
+}
+
+.gobuyon{
+	text-align:right;
+	font-size: 20pt;
+	color: red;
+	float: left;
+}
+.gobuyon2{
+	color: red;
+	padding-top: 10px;
+	font-size: 11pt;
+	float: left;
+}
+.gobuyon3{
+	text-align:right;
+	font-size: 20pt;
+	color: #9E9E9E;
+	float: left;
+}
+.gobuyon4{
+	color: #9E9E9E;
+	padding-top: 10px;
+	font-size: 11pt;
+	float: left;
+}
+#leftz{
+	margin-left: 57%;
 }

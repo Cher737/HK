@@ -1,7 +1,6 @@
 @CHARSET "UTF-8";
 
-
-#MypagemainTable{
+#MypagemainTable {
 	width: 1000px;
 	border: #E0E0E0 solid 1px;
 	height: 200px;
@@ -9,92 +8,97 @@
 	background-color: #F5F5F5;
 }
 
-#Mypagemaintag{
+#Mypagemaintag {
 	font-size: 30pt;
 	font-weight: 1000;
 	padding-bottom: 15px;
 }
-#MypageNametd{
+
+#MypageNametd {
 	width: 300px;
-	text-align: center;	
+	text-align: center;
 	border-bottom: #E0E0E0 solid 1px;
 	border-right: #E0E0E0 solid 1px;
 }
 
-#Namespan1{
-font-size: 25pt;
-font-weight: 700;	
-}
-#Namespan2{
-font-size: 18pt;
-padding-left: 10px;
+#Namespan1 {
+	font-size: 25pt;
+	font-weight: 700;
 }
 
-#MypageGradetd{
+#Namespan2 {
+	font-size: 18pt;
+	padding-left: 10px;
+}
+
+#MypageGradetd {
 	border-right: #E0E0E0 solid 1px;
 	width: 300px;
-	text-align: center;	
+	text-align: center;
 }
 
-
-#MypagePointtd{
+#MypagePointtd {
 	width: 130px;
 	padding-left: 50px;
 	padding-right: 5px;
 	border-bottom: #E0E0E0 solid 1px;
 	border-right: #E0E0E0 solid 1px;
 	color: #757575;
-	
 }
-#MypagePointtd img{
+
+#MypagePointtd img {
 	width: 50px;
 	padding-right: 10px;
 }
-#MypageCoupontd img{
+
+#MypageCoupontd img {
 	width: 50px;
 	padding-right: 10px;
 }
-#MypageCoupontd{
+
+#MypageCoupontd {
 	width: 130px;
 	padding-left: 70px;
 	padding-right: 70px;
 	border-right: #E0E0E0 solid 1px;
 	color: #757575;
-	
 }
 
-#Gradespan1{
+#Gradespan1 {
 	font-size: 17pt;
-font-weight: 700;	
-color: #455A64;
+	font-weight: 700;
+	color: #455A64;
 }
 
-#Gradespan2{
-font-size: 25pt;
-color: #9E9E9E;
-font-weight: 1000;	
- text-decoration: none;
- transition: 1s;
- text-shadow: 0 0 .1em, 0 0 .3em;
-	}
+#Gradespan2 {
+	font-size: 25pt;
+	color: #9E9E9E;
+	font-weight: 1000;
+	text-decoration: none;
+	transition: 1s;
+	text-shadow: 0 0 .1em, 0 0 .3em;
+}
 
-.Mypageinputgo{
+.Mypageinputgo {
 	width: 250px;
 	text-align: center;
 	color: #424242;
-	font-weight:800;
+	font-weight: 800;
 	border-bottom: #E0E0E0 solid 1px;
 	font-size: 14pt;
 }
-.Mypageinputgo:hover{
+
+.Mypageinputgo:hover {
 	cursor: pointer;
 }
-#Mypagemenutable{
+
+#Mypagemenutable {
 	margin-top: 20px;
 	border-collapse: collapse;
 	width: 1000px;
 }
-.Mypagemenutd{
+
+.Mypagemenutd {
 	width: 190px;
 	height: 50px;
 	border: #A1887F solid 1px;
@@ -103,11 +107,12 @@ font-weight: 1000;
 	font-size: 12pt;
 	font-weight: 700;
 }
-.Mypagemenutd:hover{
+
+.Mypagemenutd:hover {
 	cursor: pointer;
 }
 
-#MypageMaintitle{
+#MypageMaintitle {
 	text-align: left;
 	font-size: 20pt;
 	font-weight: 800;
@@ -116,310 +121,7 @@ font-weight: 1000;
 }
 
 /* BuyList*/
-#BuyperiodTable{
-width: 1000px;
-	background-color: #edf1ff;
-	margin-top: 23px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	
-}
-#BuyperiodTable tr td input{
-	width: 120px;
-	height: 20px;
-	margin-left: 10px;
-}
-#BuyperiodTable tr td button{
-	width: 50px;
-	height: 25px;
-	background-color:  #455A64;
-	color:white;
-	border:none;
-	font-weight: 800;
-	margin-right: 15px;
-	margin-left: 15px;
-}
-
-#Buyperioddiv{
-	
-	padding-right: 20px;
-	padding-left: 20px;
-	float: left;
-	font-size: 11pt;
-	font-weight: 700;
-}
-.Buyperiodclick{
-	margin-top: 3px;
-	width: 50px;
-	height: 25px;
-	border: #BDBDBD solid 1px;
-	float: left;
-	text-align: center;
-	font-size: 10pt;
-	color: #424242;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: white;
-}
-
-#widthtd{
-	width: 160px;
-}
-.Buyperiodcalendardiv{
-	border: #BDBDBD solid 1px;
-	float: left;
-	border: #BDBDBD solid 1px;
-	padding-left:10px;
-	padding-right:10px;
-	background-color: white;
-	margin-right: 10px;
-}
-
-.Buyperiodcalendardiv img{
-	width: 15px;
-	height: 15px;
-}
-#MypageBuyTable{
-	border-collapse: collapse;
-	margin-top: 30px;
-	border-top: #263238 solid 3px;
-}
-
-.Buydaytd{
-	width:150px;
-	text-align: center;
-	height: 60px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Buyproducttd{
-	width: 500px;
-	text-align: center;
-	height: 40px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Buypricetd{
-	width:200px;
-	text-align: center;
-	height: 40px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-	
-}
-
-.Buystatetd{
-	width:150px;
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Buydaytd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.Buyproducttd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.Buypricetd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	
-}
-
-.Buystatetd2{
-	text-align: center;
-	height: 50px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-#swung{
-width: 50px;
-text-align: center;	
-}
-/* Coupon*/
-
-#MyCouponSelectTable{
-width: 1000px;
-	background-color: #edf1ff;
-	margin-top: 23px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	
-}
-
-#MyCouponSelectTable tr td input{
-	width: 120px;
-	height: 20px;
-	margin-left: 10px;
-}
-#MyCouponSelectTable tr td button{
-	width: 50px;
-	height: 25px;
-	background-color:  #455A64;
-	color:white;
-	border:none;
-	font-weight: 800;
-	margin-right: 15px;
-	margin-left: 15px;
-}
-
-#Couponselectdiv{
-	padding-right: 20px;
-	padding-left: 20px;
-	float: left;
-	font-size: 11pt;
-	font-weight: 700;
-}
-
-.Couponselectclick{
-	margin-top: 3px;
-	width: 50px;
-	height: 25px;
-	border: #BDBDBD solid 1px;
-	float: left;
-	text-align: center;
-	font-size: 10pt;
-	color: #424242;
-	margin-left: 5px;
-	margin-right: 5px;
-	background-color: white;
-}
-
-.Couponselectcalendardiv{
-	border: #BDBDBD solid 1px;
-	float: left;
-	border: #BDBDBD solid 1px;
-	padding-left:10px;
-	padding-right:10px;
-	background-color: white;
-	margin-right: 10px;
-}
-
-.Couponselectcalendardiv img{
-	width: 15px;
-	height: 15px;
-}
-
-#MyCouponTable{
-	border-collapse: collapse;
-	margin-top: 30px;
-	border-top: #263238 solid 3px;
-}
-
-
-.Couponnametd{
-	width:400px;
-	text-align: center;
-	height: 60px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Coupondiscounttd{
-	width: 150px;
-	text-align: center;
-	height: 40px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Couponexptd{
-	width:300px;
-	text-align: center;
-	height: 40px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-	
-}
-
-.Couponstatetd{
-	width:150px;
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	background-color: #ECEFF1;
-}
-.Couponnametd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.Coupondiscounttd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-.Couponexptd2{
-	text-align: center;
-	height: 30px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	
-}
-
-.Couponstatetd2{
-	text-align: center;
-	height: 50px;
-	border-bottom: silver solid 1px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-#Couponinputtable{
-	width: 700px;
-	background-color: #edf1ff;
-	
-	margin-top: 40px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-}
-#Couponinputtexttd{
-	font-size: 13pt;
-	color: #424242;
-	text-align: center;
-}
-#Couponinputtexttd span{
-	font-size: 15pt;
-	color: black;
-	font-weight: 800;
-}
-#Couponinputtd{
-	text-align: center;
-	padding-top: 10px;
-}
-#Couponinputtd input{
-	width: 400px;
-	height: 18px;
-	margin-right: 20px;
-	
-}
-#Couponinputtd button{
-	width: 50px;
-	height: 25px;
-	background-color:  #455A64;
-	color:white;
-	border:none;
-	font-weight: 800;
-	margin-right: 10px;
-}
-/* Leave */
-#LeaveperiodTable{
+#BuyperiodTable {
 	width: 1000px;
 	background-color: #edf1ff;
 	margin-top: 23px;
@@ -427,23 +129,24 @@ width: 1000px;
 	padding-bottom: 15px;
 }
 
-#LeaveperiodTable tr td input{
+#BuyperiodTable tr td input {
 	width: 120px;
 	height: 20px;
 	margin-left: 10px;
 }
-#LeaveperiodTable tr td button{
+
+#BuyperiodTable tr td button {
 	width: 50px;
 	height: 25px;
-	background-color:  #455A64;
-	color:white;
-	border:none;
+	background-color: #455A64;
+	color: white;
+	border: none;
 	font-weight: 800;
 	margin-right: 15px;
 	margin-left: 15px;
 }
 
-#Leaveperioddiv{
+#Buyperioddiv {
 	padding-right: 20px;
 	padding-left: 20px;
 	float: left;
@@ -451,7 +154,7 @@ width: 1000px;
 	font-weight: 700;
 }
 
-.Leaveperiodclick{
+.Buyperiodclick {
 	margin-top: 3px;
 	width: 50px;
 	height: 25px;
@@ -465,124 +168,449 @@ width: 1000px;
 	background-color: white;
 }
 
-.Leaveperiodcalendardiv{
+#widthtd {
+	width: 160px;
+}
+
+.Buyperiodcalendardiv {
 	border: #BDBDBD solid 1px;
 	float: left;
-	padding-left:10px;
-	padding-right:10px;
+	border: #BDBDBD solid 1px;
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: white;
 	margin-right: 10px;
 }
 
-.Leaveperiodcalendardiv img{
+.Buyperiodcalendardiv img {
 	width: 15px;
 	height: 15px;
 }
 
-#LeaveMainTable{
+#MypageBuyTable {
+	border-collapse: collapse;
+	margin-top: 30px;
+	border-top: #263238 solid 3px;
+}
+
+.Buydaytd {
+	width: 150px;
+	text-align: center;
+	height: 60px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Buyproducttd {
+	width: 500px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Buypricetd {
+	width: 200px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Buystatetd {
+	width: 150px;
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Buydaytd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Buyproducttd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Buypricetd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Buystatetd2 {
+	text-align: center;
+	height: 50px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#swung {
+	width: 50px;
+	text-align: center;
+}
+/* Coupon*/
+#MyCouponSelectTable {
+	width: 1000px;
+	background-color: #edf1ff;
+	margin-top: 23px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#MyCouponSelectTable tr td input {
+	width: 120px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+#MyCouponSelectTable tr td button {
+	width: 50px;
+	height: 25px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#Couponselectdiv {
+	padding-right: 20px;
+	padding-left: 20px;
+	float: left;
+	font-size: 11pt;
+	font-weight: 700;
+}
+
+.Couponselectclick {
+	margin-top: 3px;
+	width: 50px;
+	height: 25px;
+	border: #BDBDBD solid 1px;
+	float: left;
+	text-align: center;
+	font-size: 10pt;
+	color: #424242;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.Couponselectcalendardiv {
+	border: #BDBDBD solid 1px;
+	float: left;
+	border: #BDBDBD solid 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
+	margin-right: 10px;
+}
+
+.Couponselectcalendardiv img {
+	width: 15px;
+	height: 15px;
+}
+
+#MyCouponTable {
+	border-collapse: collapse;
+	margin-top: 30px;
+	border-top: #263238 solid 3px;
+}
+
+.NotCoupon {
+	text-align: center;
+	padding: 70px;
+	border-bottom: silver solid 1px;
+}
+
+.Couponnametd {
+	width: 400px;
+	text-align: center;
+	height: 60px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Coupondiscounttd {
+	width: 150px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Couponexptd {
+	width: 300px;
+	text-align: center;
+	height: 40px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Couponstatetd {
+	width: 150px;
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	background-color: #ECEFF1;
+}
+
+.Couponnametd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Coupondiscounttd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Couponexptd2 {
+	text-align: center;
+	height: 30px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.Couponstatetd2 {
+	text-align: center;
+	height: 50px;
+	border-bottom: silver solid 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#Couponinputtable {
+	width: 700px;
+	background-color: #edf1ff;
+	margin-top: 40px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#Couponinputtexttd {
+	font-size: 13pt;
+	color: #424242;
+	text-align: center;
+}
+
+#Couponinputtexttd span {
+	font-size: 15pt;
+	color: black;
+	font-weight: 800;
+}
+
+#Couponinputtd {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#Couponinputtd input {
+	width: 400px;
+	height: 18px;
+	margin-right: 20px;
+}
+
+#Couponinputtd button {
+	width: 50px;
+	height: 25px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 10px;
+}
+/* Leave */
+#LeaveperiodTable {
+	width: 1000px;
+	background-color: #edf1ff;
+	margin-top: 23px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#LeaveperiodTable tr td input {
+	width: 120px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+#LeaveperiodTable tr td button {
+	width: 50px;
+	height: 25px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#Leaveperioddiv {
+	padding-right: 20px;
+	padding-left: 20px;
+	float: left;
+	font-size: 11pt;
+	font-weight: 700;
+}
+
+.Leaveperiodclick {
+	margin-top: 3px;
+	width: 50px;
+	height: 25px;
+	border: #BDBDBD solid 1px;
+	float: left;
+	text-align: center;
+	font-size: 10pt;
+	color: #424242;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.Leaveperiodcalendardiv {
+	border: #BDBDBD solid 1px;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
+	margin-right: 10px;
+}
+
+.Leaveperiodcalendardiv img {
+	width: 15px;
+	height: 15px;
+}
+
+#LeaveMainTable {
 	border-collapse: collapse;
 	margin-top: 30px;
 	border-top: #263238 solid 3px;
 }
 /* MyCounseling*/
-
-#MyCounselingTable{
+#MyCounselingTable {
 	border-collapse: collapse;
 	margin-top: 10px;
 	border-top: #263238 solid 3px;
 }
 
-.MyCounselingNumber{
-	width:100px;
+.MyCounselingNumber {
+	width: 100px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingCategory{
-	width:130px;
+
+.MyCounselingCategory {
+	width: 130px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingTitle{
-	width:500px;
+
+.MyCounselingTitle {
+	width: 500px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingWriteday{
-	width:170px;
+
+.MyCounselingWriteday {
+	width: 170px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingState{
-	width:100px;
+
+.MyCounselingState {
+	width: 100px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingNumber{
-	width:100px;
+
+.MyCounselingNumber {
+	width: 100px;
 	text-align: center;
 	height: 60px;
 	border-bottom: silver solid 1px;
 	background-color: #ECEFF1;
 }
-.MyCounselingNumber2{
+
+.MyCounselingNumber2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-.MyCounselingCategory2{
+
+.MyCounselingCategory2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-.MyCounselingTitle2{
+
+.MyCounselingTitle2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-.MyCounselingWriteday2{
+
+.MyCounselingWriteday2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-.MyCounselingState2{
+
+.MyCounselingState2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-.MyCounselingNumber2{
+
+.MyCounselingNumber2 {
 	text-align: center;
 	height: 40px;
 	border-bottom: silver solid 1px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
 }
-#Counselinggodiv{
+
+#Counselinggodiv {
 	width: 80px;
 	font-weight: 800;
 	border: black solid 1px;
@@ -591,3 +619,48 @@ width: 1000px;
 	padding: 5px 5px 3px 3px;
 	margin-right: 15px;
 }
+
+.couponselectbutton {
+	width: 50px;
+	height: 30px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.couponselectbutton2 {
+	width: 80px;
+	height: 30px;
+	background-color: #BDBDBD;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#NotCouponbutton {
+	background-color: #0D47A1;
+	border: none;
+	color: white;
+	margin-top: 25px;
+	width: 100px;
+	height: 50px;
+	font-size: 14pt;
+	font-weight: 800;
+}
+.Couponnumber{
+font-size: 10pt;
+font-weight: 800;
+color: #757575;	
+}
+#miniCoupontitle{
+	text-align: center;
+	font-size: 20pt;
+	font-weight: 800;
+	padding-top: 30px;
+	padding-left: 10px;
+}
+

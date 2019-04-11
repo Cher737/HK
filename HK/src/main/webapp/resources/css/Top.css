@@ -29,11 +29,12 @@
 
 .menu{
 	float: left;
-	width: 138px;
+	width: 195px;
 	border: silver solid 1px;
 	height: 30px;
 	display: table;
 	margin: 0 auto;
+	border-collapse: collapse;
 }
 
 /* Top 10개 상품 */

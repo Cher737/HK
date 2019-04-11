@@ -1,9 +1,16 @@
 $(function() {
-	
 		var money = $.cookie("selectmoney");
 		if (money != null){
 		$("#moneyselect").val(money).prop("selected", true);
+		
+		var title = $(".pageTitle").text();
+		if(title == "장바구니" || title =="주문결제" || title == "주문완료"){
+			$("#todaymoneyspan2").text("  ￦");
+		} else{
 		$("#todaymoneyspan2").text("  "+ money);
+		}
+		}else{
+			$("#todaymoneyspan2").text("  ￦");
 		}
 	
 		$("#todaymoneyspan1").number(true,1);
@@ -245,4 +252,28 @@ $(function() {
 				});
 			
 		});
+		var mypage = true;
+		$("#mypageimg").click(function() {
+			if(mypage == true){
+				
+			var mypageimg = $("#mypageimg").offset();
+			var left = mypageimg.left -20;
+			var top = mypageimg.top +50;
+			$("#Mymenutable1").css("left",left).css("top",top).css("opacity","1");
+			mypage = false;
+			} else{
+					
+					$("#Mymenutable1").css("left",0).css("top",-200).css("opacity","0");
+					mypage = true;
+			}
+		});
+		$("#titlesearchimg").click (function(){
+			
+		var Searchtitle = $("#titlesearch").val();
+		
+		var form = $("<form></form>");
+		 var p_numbertag = $("<input/>").attr("type","hidden")
+		 location.href = "product?name="+Searchtitle;
+		})
+		
 	});

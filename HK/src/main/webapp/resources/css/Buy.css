@@ -1,14 +1,14 @@
 @CHARSET "UTF-8";
 
-#BuyPageArea {
-	
+.Buypadding	{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .BuyPageSubtitle {
 	text-align: left;
 	font-size: 20pt;
 	font-weight: 800;
-	padding-top: 20px;
 	padding-left: 10px;
 }
 
@@ -88,7 +88,7 @@
 
 #BuyCoupontd1 span {
 	padding-left: 20px;
-	color: #EF5350;
+	color: #9E9E9E;
 }
 
 #BuyCoupontd1 button {
@@ -102,6 +102,24 @@
 	margin-left: 15px;
 }
 
+#PointUsebutton{
+	width: 50px;
+	height: 30px;
+	background-color: #455A64;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+}
+#PointNotUsebutton{
+	width: 70px;
+	height: 30px;
+	background-color: #78909C;
+	color: white;
+	border: none;
+	font-weight: 800;
+	margin-right: 15px;
+}
 #BuyPointtd1 {
 	width: 400px;
 	height: 50px;
@@ -121,6 +139,10 @@
 #Pointinput {
 	height: 20px;
 	outline: none;
+	text-align: right;
+	color: #424242;
+	padding-right: 5px;
+	border: solid 1px black;
 }
 
 #Buypaymenttd {
@@ -233,4 +255,186 @@
 	font-weight: 1000;
 	font-family: 'Noto Sans KR', sans-serif;
 	width: 280px;
+}
+#buylisttable{
+	width: 1000px;
+	border: #BDBDBD solid 1px;
+	border-top: Black solid 2px;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+#buylisttabletr1 td {
+	background-color: #edf1ff;
+	height: 70px;
+	text-align: center;
+	border-bottom: #BDBDBD solid 1px;
+}
+.buylistproductimgtd img{
+	width: 180px;
+}
+.buylistproductimgtd {
+	width: 200px;
+	border-bottom: #BDBDBD solid 1px;
+}
+.buylistproductinfotd{
+	width: 300px;
+	border-bottom: #BDBDBD solid 1px;
+}
+
+.buylistbranddiv{
+	font-size: 13pt;
+	font-weight: 1000;	
+}
+.buylistnamediv{
+	font-size: 11pt;
+}
+.buylistnumberdiv{
+	color:silver;
+}
+.buylistpricetd{
+	border-bottom: #BDBDBD solid 1px;
+	text-align: center;
+	color: #616161;
+}
+.buylistdiscounttd{
+	border-bottom: #BDBDBD solid 1px;
+	text-align: center;
+}
+.buylistdistcountratediv{
+	font-size: 10pt;
+	color: #424242;
+	
+}
+.buylistcounttd{
+	border-bottom: #BDBDBD solid 1px;
+	text-align: center;
+	font-size: 11pt;
+	color: #616161;
+}
+.buylistbuypricetd{
+	text-align: center;
+	border-bottom: #BDBDBD solid 1px;
+}
+
+#ResultTable{
+	margin-top: 20px;
+	border: #CFD8DC solid 10px;
+	width: 1000px;
+	height: 130px;
+	text-align: center;
+}
+
+#ResultTabletd1{
+	padding-top: 40px;
+	font-weight: 800;
+	font-size: 20pt;
+	height: 70px;
+	padding-bottom: -20px;
+}
+#ResultTabletd2{
+	font-size: 13pt;
+	color: #9E9E9E;
+	padding-top: -50px;
+	padding-bottom: 30px;
+}
+#ResultTable2{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width:1000px;
+	background-color: #FAFAFA;
+	border: #CFD8DC solid 1px;
+	font-size: 11pt;
+}
+#BuyResultTable{
+	border: black solid 1px;
+	width: 1000px;
+	height: 400px;
+	background-color: #FAFAFA;
+}
+
+#onetable{
+	margin: 10px;
+	width: 305px;
+	height: 370px;
+	border-right: silver solid 1px;
+}
+#onetable tr td{
+	vertical-align: top;
+	padding-top: 54px;
+}
+#onetabletd1{
+padding-left: 20px;	
+}
+#onetabletd1div1{
+	font-size: 16pt;
+}
+#twotable{
+	margin: 10px;
+	width: 305px;
+	height: 370px;
+	border-right: silver solid 1px;
+}
+
+#threetable{
+	margin: 10px;
+	width: 305px;
+	height: 370px;
+	background-color: 
+}
+
+.discountdivs{
+	padding-right: 60px;
+	text-align: right;
+	color: #757575;
+	font-size: 11pt;
+}
+.Allpricediv1{
+	font-size: 15pt;
+	font-weight: 800;
+	text-align: right;
+	padding-right: 40px;
+}
+.Allpricediv2{
+	color: #757575;
+	font-size: 12pt;
+	text-align: right;
+	padding-right: 40px;
+}
+.topdivname{
+	font-size: 14pt;
+	margin-bottom: 30px;
+}
+.discountdivs2{
+	color: #757575;
+	font-size: 11pt;
+}
+#twotabletr1 td{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+#opri{
+	margin-top: -30px;
+	font-size: 11pt;
+}
+#LastBuydiv1{
+	font-size: 18pt;
+	font-weight: 800;
+	text-align: right;
+	padding-right: 40px;
+	color: red;
+}
+#LastBuydiv2{
+	color: #757575;
+	font-size: 14pt;
+	text-align: right;
+	padding-right: 40px;
+}
+#lasttd{
+	height: 180px;
+	vertical-align: top;
+}
+#threetr1 td{
+height: 90px;	
+vertical-align: top;
+	padding-top: 54px;
 }

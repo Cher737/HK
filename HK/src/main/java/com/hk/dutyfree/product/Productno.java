@@ -6,8 +6,23 @@ public class Productno {
 
 	private BigDecimal start;
 	private BigDecimal end;
+	private String categoryone;
 	
-	
+	public Productno(BigDecimal start, BigDecimal end, String categoryone) {
+		super();
+		this.start = start;
+		this.end = end;
+		this.categoryone = categoryone;
+	}
+
+	public String getCategoryone() {
+		return categoryone;
+	}
+
+	public void setCategoryone(String categoryone) {
+		this.categoryone = categoryone;
+	}
+
 	public Productno() {
 		// TODO Auto-generated constructor stub
 	}

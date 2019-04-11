@@ -13,6 +13,31 @@ public class ProductSearch {
 	private String p_categorytwo;
 	private BigDecimal start;
 	private BigDecimal end;
+	private String p_searchname;
+	
+	public String getP_searchname() {
+		return p_searchname;
+	}
+
+	public void setP_searchname(String p_searchname) {
+		this.p_searchname = p_searchname;
+	}
+
+	public ProductSearch(String p_name, String p_gender, String d_discount, BigDecimal p_pricemin,
+			BigDecimal p_pricemax, String p_categoryone, String p_categorytwo, BigDecimal start, BigDecimal end,
+			String p_searchname) {
+		super();
+		this.p_name = p_name;
+		this.p_gender = p_gender;
+		this.d_discount = d_discount;
+		this.p_pricemin = p_pricemin;
+		this.p_pricemax = p_pricemax;
+		this.p_categoryone = p_categoryone;
+		this.p_categorytwo = p_categorytwo;
+		this.start = start;
+		this.end = end;
+		this.p_searchname = p_searchname;
+	}
 
 	public String getP_name() {
 		return p_name;
