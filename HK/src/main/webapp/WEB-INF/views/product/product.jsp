@@ -14,12 +14,13 @@
 
 	<table class="categorytable">
 		<tr>
-			<td class="categorytd1"><select name="categoryone" class="categoryone">
-					<option  value="화장품/향수">화장품/향수</option>
+			<td class="categorytd1"><select name="categoryone"
+				class="categoryone">
+					<option value="화장품/향수">화장품/향수</option>
 					<option value="패션/잡화">패션/잡화</option>
-					<option  value="시계/주얼리">시계/주얼리</option>
-					<option  value="전자제품">전자제품</option>
-					<option  value="식품">식품</option>
+					<option value="시계/주얼리">시계/주얼리</option>
+					<option value="전자제품">전자제품</option>
+					<option value="식품">식품</option>
 					<!-- 밸류 쓰면 실제 전달되는 값이 달라짐(다르게 하고 싶을때) -->
 			</select></td>
 			<td class="categorytd2"><select id="selectcate2"></select></td>
@@ -54,8 +55,8 @@
 				for="cb6"></label> 남성</td>
 			<td class="sc"><input class="cb2" type="checkbox" id="cb7"><label
 				for="cb7"></label> 여성</td>
-			<td class="sc" colspan="3"><input class="cb2" type="checkbox" id="cb8"><label
-				for="cb8"></label> 남녀공용</td>
+			<td class="sc" colspan="3"><input class="cb2" type="checkbox"
+				id="cb8"><label for="cb8"></label> 남녀공용</td>
 		</tr>
 		<tr>
 			<td class="subtitle" align="center">혜택</td>
@@ -67,10 +68,25 @@
 
 
 	<table class="producttable1">
+		<tr id="producttr1">
+		<c:forEach begin="0" end="4" var="i">
+			<td class="producttd" id="producttd${i }"></td>
+		</c:forEach>
+		</tr>
 	</table>
 	<table class="producttable2">
+	<tr id="producttr2">
+		<c:forEach begin="5" end="9" var="i">
+			<td class="producttd" id="producttd${i }"></td>
+		</c:forEach>
+		</tr>
 	</table>
 	<table class="producttable3">
+	<tr id="producttr3">
+		<c:forEach begin="10" end="14" var="i">
+			<td class="producttd" id="producttd${i }"></td>
+		</c:forEach>
+		</tr>
 	</table>
 	<table>
 		<tr>

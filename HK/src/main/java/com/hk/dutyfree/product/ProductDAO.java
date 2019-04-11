@@ -65,6 +65,7 @@ public class ProductDAO {
 			int pageNo = 0;
 			int searchCount = 0;
 			String name = "";
+			String searchname = "";
 			int pricemax = 50000;
 			int pricemin = 0;
 			String gender = "";
@@ -84,6 +85,12 @@ public class ProductDAO {
 				pds.setP_name(name);
 			} else {
 				pds.setP_name("");
+			}
+			if (!req.getParameter("searchname").equals("null")) {
+				searchname = req.getParameter("searchname");
+				pds.setP_searchname(searchname);
+			} else {
+				pds.setP_searchname("");
 			}
 			if (!req.getParameter("pricemax").equals("0")) {
 				pricemax = Integer.parseInt(req.getParameter("pricemax"));
@@ -120,7 +127,6 @@ public class ProductDAO {
 			}
 
 			searchCount = ss.getMapper(ProductMapper.class).searchProductCount(pds);
-
 			double count = 15;
 
 			int pageCount = (int) Math.ceil(searchCount / count);
@@ -159,7 +165,7 @@ public class ProductDAO {
 	public void WebCrolling() {
 		try {
 
-			Document d = Jsoup.connect("http://www.dootadutyfree.com/dutyfree/goods/list/2/100/200100050002/view.do")
+			Document d = Jsoup.connect("http://www.dootadutyfree.com/dutyfree/search/search/search.do?querys1=&querys2=&querys3=&querys4=&querys5=&querys6=&querys7=&querys8=&querys9=&querys10=&catePosition=L&LCate=&LCateNM=&MCate=&MCateNM=&SCate=&SCateNM=&queryRecomm=%25EC%259C%25A1%25EC%258B%25AC%25EC%259B%2590%2520%25EC%25A7%2580%25EA%25B0%2591&addQuery=&startCountStr=0&startSubCountStr=0&chkImgList=goodsimage&chkDetail=off&boost=goodsG30&boostSex=goodsG&boostAge=30&commentFlag=Pre&sort=WEIGHT&order=1&isPrice=NO&tMinPrice=3&tMaxPrice=107&strMinPriceWon=0&strMaxPriceWon=1000&strMinPrice=3&strMaxPrice=107&strAddQuery=%EC%9C%A1%EC%8B%AC%EC%9B%90+%EC%A7%80%EA%B0%91&collection=goods&untGdsStat=&brandFlag=KOR&collCnt=51&query=%EC%9C%A1%EC%8B%AC%EC%9B%90+%EC%A7%80%EA%B0%91&minPrice=3&maxPrice=107&goodsidx=20")
 					.execute().parse();
 			Product pd = new Product();
 			Random random = new Random();
@@ -178,9 +184,9 @@ public class ProductDAO {
 				} else {
 					pd.setP_price(new BigDecimal(element.select(".orgPrice").text().replace("$", "").replace(" ", "")));
 				}
-				pd.setP_categoryone("식품");
-				pd.setP_categorytwo("선호식품");
-				pd.setP_gender("공용");
+				pd.setP_categoryone("패션/잡화");
+				pd.setP_categorytwo("지갑");
+				pd.setP_gender("여성");
 				ss.getMapper(ProductMapper.class).DBwrite(pd);
 				last = ss.getMapper(ProductMapper.class).lastProduct().getP_number();
 				ran = random.nextInt(2);

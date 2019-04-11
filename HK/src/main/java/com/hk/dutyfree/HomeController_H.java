@@ -21,17 +21,21 @@ public class HomeController_H {
 	
 	@Autowired
 	private SpecialDAO spDAO;
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String Index(HttpServletRequest request, HttpServletResponse response) {
+	public String Index(HttpServletRequest request) {
 		rDAO.getRate(request);
-		spDAO.getSailProducts(request, response);
+		spDAO.getSailProducts(request);
+		spDAO.getTopProducts(request);
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(HttpServletRequest request) {
 		rDAO.getRate(request);
+		spDAO.getSailProducts(request);
+		spDAO.getTopProducts(request);
 		request.setAttribute("centerpage", "main/main.jsp");
 		return "index";
 	}
@@ -51,6 +55,7 @@ public class HomeController_H {
 		request.setAttribute("Surportpage", "Counseling.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/Mypage.main", method = RequestMethod.GET)
 	public String Mypage(HttpServletRequest request) {
 		rDAO.getRate(request);
@@ -59,13 +64,6 @@ public class HomeController_H {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/Mypage.Coupon", method = RequestMethod.GET)
-	public String MypageCoupon(HttpServletRequest request) {
-		rDAO.getRate(request);
-		request.setAttribute("centerpage", "Mypage/MypageMain.jsp");
-		request.setAttribute("Mypage", "Coupon.jsp");
-		return "index";
-	}
 	@RequestMapping(value = "/Mypage.MyCounseling", method = RequestMethod.GET)
 	public String MyCounseling(HttpServletRequest request) {
 		rDAO.getRate(request);
@@ -82,6 +80,7 @@ public class HomeController_H {
 		request.setAttribute("Passportpage", "Passportselect.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/Mypage.Passport.update", method = RequestMethod.GET)
 	public String PassPortupdate(HttpServletRequest request) {
 		rDAO.getRate(request);
@@ -90,6 +89,7 @@ public class HomeController_H {
 		request.setAttribute("Passportpage", "Passportupdate.jsp");
 		return "index";
 	}
+	
 	@RequestMapping(value = "/Mypage.Leave.Main", method = RequestMethod.GET)
 	public String LeaveMain(HttpServletRequest request) {
 		rDAO.getRate(request);

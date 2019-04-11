@@ -91,6 +91,8 @@ public class UserDAO {
 	public void login(User u, HttpServletRequest request, HttpServletResponse response) {
 		try {
 			User dbM = ss.getMapper(UserMapper.class).getMemberById(u);
+			String mail = dbM.getU_mail().replace("=","@");
+			dbM.setU_mail(mail);
 			if (dbM != null) {
 				if (u.getU_pw().equals(dbM.getU_pw())) {
 					request.getSession().setAttribute("loginMember", dbM);
@@ -141,14 +143,14 @@ public class UserDAO {
 		return false;
 	}
 	
-	public void Info(Passport p, HttpServletRequest request) {
-			User u = (User) request.getSession().getAttribute("loginMember");
-			String pp_nationality = p.getPp_nationality();
-			request.setAttribute("pp_nationality", pp_nationality);
-			String u_birth = u.getU_jumin().substring(0,6);
-			request.setAttribute("u_birthInfo", u_birth);
-			String u_mail = u.getU_mail().replace("=", "@");
-			request.setAttribute("u_mailInfo", u_mail);
+	public void Info(Passport p,HttpServletRequest request) {
+		User u = (User) request.getSession().getAttribute("loginMember");
+		String pp_nationality = p.getPp_nationality();
+		request.setAttribute("pp_nationality", pp_nationality);
+		String u_birth = u.getU_jumin().substring(0,6);
+		request.setAttribute("u_birthInfo", u_birth);
+		String u_mail = u.getU_mail().replace("=", "@");
+		request.setAttribute("u_mailInfo", u_mail);
 	}
 	
 	public void update(User u, HttpServletRequest request) {

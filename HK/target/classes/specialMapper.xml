@@ -8,7 +8,13 @@
 				) where rm &gt;= #{start} and rm &lt;= #{end}
 			order by rm
 	</select>
-	
+	<select id="getTopProducts" parameterType="com.hk.dutyfree.product.Productno" resultType="com.hk.dutyfree.product.Product">
+		select * from (
+			select rownum as rm, p_number, p_name, p_price,p_img,p_categoryone,p_categorytwo,p_brand,p_gender,p_avgscore,d_discount,d_discountrate
+				from (select * from hk_Product,hk_discount where p_number=d_pnumber and p_categoryone like '%'||#{categoryone}||'%'  order by p_avgscore desc)
+				) where rm &gt;= #{start} and rm &lt;= #{end}
+			order by rm
+	</select>
 	
 
 </mapper>

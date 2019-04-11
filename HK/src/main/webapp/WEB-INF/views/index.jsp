@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,6 +14,8 @@
 <script src="resources/js/go.js"></script>
 <script src="resources/js/index.js"></script>
 <script src="resources/js/check.js"></script>
+<script type="text/javascript"
+	src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script
@@ -20,9 +23,9 @@
 <script src="http://lab.alexcican.com/set_cookies/cookie.js"
 	type="text/javascript"></script>
 <script type="text/javascript">
-	$(function(){
-		rateinput();
-	});
+$(function(){
+	rateinput();
+});
 </script>
 </head>
 <body>
@@ -31,7 +34,7 @@
 			<td>
 				<table id="titletable">
 					<tr>
-						<td align="center" >
+						<td align="center">
 							<table id="titlesearchtable">
 								<tr>
 									<td id="titlesearchtd">
@@ -49,10 +52,10 @@
 								</tr>
 							</table>
 						</td>
-						<td id="titlecarttd" align="center"><img
-							src="resources/img/shopping-cart.png"></td>
-						<td id="titlemypagetd" align="right"><a href="Mypage.main"><img
-								src="resources/img/mypage.png"></a></td>
+						<td id="titlecarttd" align="center"><a href="bucket"><img
+								src="resources/img/shopping-cart.png"></a></td>
+						<td id="titlemypagetd" align="right"><img id="mypageimg"
+							src="resources/img/mypage.png"></td>
 					</tr>
 				</table>
 			</td>
@@ -61,39 +64,32 @@
 			<td>
 				<table id="bodytable">
 					<tr>
-						<td>
-							<table id="Mymenutable1">
-								<tr>
-									<td><a href="login.go">로그인</a></td>
-								</tr>
-								<tr>
-									<td><a href="join.go">회원가입</a></td>
-								</tr>
-								<tr>
-									<td><a href="logout.go">로그아웃</a></td>
-								</tr>
-								<tr>
-									<td><a href="memberinfo">회원정보</a></td>
-								</tr>
-								<tr>
-									<td><a href="memberupdate.go">정보수정</a></td>
-								</tr>
-								<tr>
-									<td><a href="product.detail">상품상세보기</a></td>
-								</tr>
-								<tr>
-									<td>
-										<table>
-											<tr>
-												<td>${sessionScope.loginMember.u_id }(<span
-													style="color: black;">${sessionScope.loginMember.u_name }</span>)
-												</td>
-											</tr>
-										</table>
-									</td>
-								</tr>
-							</table>
-						</td>
+						<td><c:if test="${sessionScope.loginMember == null}">
+								<table id="Mymenutable1">
+									<tr>
+										<td><a href="login.go">로그인</a></td>
+									</tr>
+									<tr>
+										<td><a href="join.go">회원가입</a></td>
+									</tr>
+								</table>
+							</c:if> <c:if test="${sessionScope.loginMember != null}">
+								<table id="Mymenutable1">
+									<tr>
+										<td>${sessionScope.loginMember.u_name }님</td>
+									</tr>
+									<tr>
+										<td><a href="logout.go">로그아웃</a></td>
+									</tr>
+									<tr>
+										<td><a href="memberinfo">회원정보</a></td>
+									</tr>
+									<tr>
+										<td><a href="memberupdate.go">정보수정</a></td>
+									</tr>
+
+								</table>
+							</c:if></td>
 					</tr>
 					<tr>
 						<td colspan="3" align="center" id="centerpagetd"><jsp:include
@@ -123,7 +119,9 @@
 											<img src="resources/img/coin.png" class="submenuimg">
 										</div> 금일 환율
 										<div id="todaymoneydiv">
-											<span id="todaymoneyspan1">${rateResult.er_rate }</span><span
+											<span id="todaymoneyspan1">
+											${rateResult.er_rate }
+											</span><span
 												id="todaymoneyspan2"></span>
 										</div></td>
 								</tr>

@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/product.css">
-<script src="resources/js/mainpageProduct.js"></script>
 </head>
 <body>
 	<table id="TopmainTable">
@@ -18,19 +17,38 @@
 	</td>
 	</tr>
 	</table>
-
 	<table class="producttable1">
 		<tr id="producttr1">
-			<c:forEach var="spd" items="${spds}" begin="0" end="4">
-			<!-- 배열(진짜 for-each)을 원하면 items -->
+			<c:forEach var="spd" items="${spds}" begin="0" end="4"
+				varStatus="idx">
+				<!-- 배열(진짜 for-each)을 원하면 items -->
 				<td class="producttd">
 					<table class="inproducttable">
-						<tr><td class="inimgtd" colspan="2" align="center"><img class="topimg" src="${spd.p_img }"><td></tr>
-						<tr><td class="brandtd" colspan="2">${spd.p_brand }</td></tr>
-						<tr><td class="nametd" colspan="2">${spd.p_name }</td></tr>
-						<tr><td class="pricetd" colspan="2"><span class="pricespan">${spd.p_price }</span><span class="discountratespan">${spd.d_discountrate }% off</span></td></tr>
-						<tr><td class="discountpricetd" colspan="2"><span class="discountpricespan"></span><span class="price2span"></span></td></tr>
-						<tr><td class="carttd">장바구니</td><td class="buytd">바로구매</td></tr>
+						<tr>
+							<td class="inimgtd" colspan="2" align="center"><img
+								class="topimg" src="${spd.p_img }">
+							<td>
+						</tr>
+						<tr>
+							<td class="brandtd" colspan="2">${spd.p_brand }</td>
+						</tr>
+						<tr>
+							<td class="nametd" colspan="2">${spd.p_name }</td>
+						</tr>
+						<tr>
+							<td class="pricetd" colspan="2"><span class="pricespan">$<span class="pricespand"
+									id="pricespan${idx.count+10}">${spd.p_price }</span></span><span id="discount${idx.count+10}"
+								class="discountratespan">${spd.d_discountrate }% off</span></td>
+						</tr>
+						<tr>
+							<td class="discountpricetd" colspan="2"><span
+								id="discountpricespan${idx.count+10}" class="discountpricespan">
+							</span><span id="price2span${idx.count+10}" class="price2span"></span></td>
+						</tr>
+						<tr>
+							<td id="${spd.p_number}" class="carttd">장바구니</td>
+							<td class="buytd">바로구매</td>
+						</tr>
 					</table>
 				</td>
 			</c:forEach>
@@ -38,15 +56,36 @@
 	</table>
 	<table class="producttable2">
 		<tr id="producttr2">
-			<c:forEach var="spd" items="${spds}" begin="5" end="9">
+			<c:forEach var="spd" items="${spds}" begin="5" end="9"
+				varStatus="idx">
 				<td class="producttd">
 					<table class="inproducttable">
-						<tr><td class="inimgtd" colspan="2" align="center"><img class="topimg" src="${spd.p_img }"><td></tr>
-						<tr><td class="brandtd" colspan="2">${spd.p_brand }</td></tr>
-						<tr><td class="nametd" colspan="2">${spd.p_name }</td></tr>
-						<tr><td class="pricetd" colspan="2"><span class="pricespan">${spd.p_price }</span><span class="discountratespan">${spd.d_discountrate }% off</span></td></tr>
-						<tr><td class="discountpricetd" colspan="2"><span class="discountpricespan"></span><span class="price2span"></span></td></tr>
-						<tr><td class="carttd">장바구니</td><td class="buytd">바로구매</td></tr>
+						<tr>
+							<td class="inimgtd" colspan="2" align="center"><img
+								class="topimg" src="${spd.p_img }">
+							<td>
+						</tr>
+						<tr>
+							<td class="brandtd" colspan="2">${spd.p_brand }</td>
+						</tr>
+						<tr>
+							<td class="nametd" colspan="2">${spd.p_name }</td>
+						</tr>
+						<tr>
+							<td class="pricetd" colspan="2"><span class="pricespan">$<span
+									id="pricespan${idx.count+15}">${spd.p_price }</span></span> <span
+								id="discount${idx.count+15}" class="discountratespan">${spd.d_discountrate }%
+									off</span></td>
+						</tr>
+						<tr>
+							<td class="discountpricetd" colspan="2"><span
+								id="discountpricespan${idx.count+15}" class="discountpricespan">
+							</span><span id="price2span${idx.count+15}" class="price2span"></span></td>
+						</tr>
+						<tr>
+							<td id="${spd.p_number}" class="carttd">장바구니</td>
+							<td class="buytd">바로구매</td>
+						</tr>
 					</table>
 				</td>
 			</c:forEach>

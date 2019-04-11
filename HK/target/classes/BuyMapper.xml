@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dutyfree.buysystem.BuyMapper">
+<insert id="Bucketinsert" parameterType="com.hk.dutyfree.buysystem.Bucket">
+insert into hk_bucket values(
+hk_bucket_seq.nextval,#{bk_id},#{bk_pnumber}
+)
+</insert>
+<select id="BucketSelect" parameterType="com.hk.dutyfree.buysystem.Bucket" resultType="com.hk.dutyfree.buysystem.Bucket">
+select * from hk_bucket where bk_id = #{bk_id}
+</select>
+<select id="BucketProductselect" parameterType="com.hk.dutyfree.buysystem.Bucket" resultType="com.hk.dutyfree.product.Product">
+select * from hk_Product,hk_discount 
+where p_number=d_pnumber and p_number= #{bk_pnumber}
+</select>
+<select id="BucketProductselect2" parameterType="com.hk.dutyfree.buysystem.Bucket" resultType="com.hk.dutyfree.product.Product">
+select * from hk_Product,hk_discount,hk_Bucket
+where p_number = bk_pnumber and p_number = d_pnumber and bk_id = #{bk_id}
+</select>
+<delete id="BucketDelete" parameterType="com.hk.dutyfree.buysystem.Bucket">
+delete from hk_bucket where bk_id = #{bk_id} and bk_pnumber = #{bk_pnumber}
+</delete>
+<insert id="UsePoint" parameterType="com.hk.dutyfree.point.Point">
+insert into hk_point values(
+hk_point_seq.nextval,#{pt_id},#{pt_txt},#{pt_point}, sysdate, #{pt_code}
+)
+</insert>
+<update id="UseCoupon" parameterType="com.hk.dutyfree.coupon.UseCoupon">
+update hk_usecoupon
+set uc_used = #{uc_used}
+where uc_number =  #{uc_number}
+</update>
+<update id="UpdateUserPoint" parameterType="com.hk.dutyfree.user.User">
+update HK_USER
+set u_point = #{u_point}
+where u_id = #{u_id}
+</update>
+<select id="SelectPoint" parameterType="com.hk.dutyfree.point.Point" resultType="com.hk.dutyfree.point.Point">
+select * from hk_point where pt_number = (
+select max(pt_number) from hk_point  where pt_id = #{pt_id}) 
+</select>
+<insert id="insertBuylist" parameterType="com.hk.dutyfree.buysystem.Buylist">
+insert into hk_buylist values(
+#{b_buycode},#{b_id},sysdate,#{b_pay},#{b_payment}
+,#{b_ucnumber},#{b_ucdiscount},#{b_ptnumber},#{b_ptdiscount},#{b_ugrade},#{b_udiscount})
+</insert>
+<select id="SelectBuylist" parameterType="com.hk.dutyfree.buysystem.Buylist" resultType="com.hk.dutyfree.buysystem.Buylist">
+select * from hk_buylist
+where b_buycode = (select b_buycode from (
+select rownum as rm, b_buycode
+from (select * from hk_buylist where b_id = #{b_id} order by b_date desc)
+) where rm = 1)
+</select>
+<insert id="insertBuyDetail" parameterType="com.hk.dutyfree.buysystem.BuyDetail">
+insert into hk_buydetail values(
+hk_buydetail_seq.nextval,#{bd_bbuycode},#{bd_receive},#{bd_pnumber}
+,#{bd_payment},#{bd_count})
+</insert>
+<select id="selectBuyDetail" parameterType="com.hk.dutyfree.buysystem.BuyDetail" resultType="com.hk.dutyfree.buysystem.BuyDetail">
+select * from hk_buydetail,hk_product,hk_discount
+where p_number = bd_pnumber and bd_pnumber = d_pnumber and  bd_bbuycode = #{bd_bbuycode}
+</select>
+</mapper>

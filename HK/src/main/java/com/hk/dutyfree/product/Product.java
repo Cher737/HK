@@ -15,7 +15,7 @@ public class Product {
 	private BigDecimal p_avgscore;
 	private String d_discount;
 	private BigDecimal d_discountrate;
-	
+	private String p_count;
 	
 	public Product(BigDecimal p_number, String p_name, BigDecimal p_price, String p_img, String p_categoryone,
 			String p_categorytwo, String p_brand, String p_gender, BigDecimal p_avgscore, String d_discount,
@@ -32,6 +32,32 @@ public class Product {
 		this.p_avgscore = p_avgscore;
 		this.d_discount = d_discount;
 		this.d_discountrate = d_discountrate;
+	}
+
+	public String getP_count() {
+		return p_count;
+	}
+
+	public void setP_count(String p_count) {
+		this.p_count = p_count;
+	}
+
+	public Product(BigDecimal p_number, String p_name, BigDecimal p_price, String p_img, String p_categoryone,
+			String p_categorytwo, String p_brand, String p_gender, BigDecimal p_avgscore, String d_discount,
+			BigDecimal d_discountrate, String p_count) {
+		super();
+		this.p_number = p_number;
+		this.p_name = p_name;
+		this.p_price = p_price;
+		this.p_img = p_img;
+		this.p_categoryone = p_categoryone;
+		this.p_categorytwo = p_categorytwo;
+		this.p_brand = p_brand;
+		this.p_gender = p_gender;
+		this.p_avgscore = p_avgscore;
+		this.d_discount = d_discount;
+		this.d_discountrate = d_discountrate;
+		this.p_count = p_count;
 	}
 
 	public BigDecimal getP_number() {
