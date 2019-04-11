@@ -264,7 +264,7 @@ where uc_number =  41
 
 update HK_USER
 set u_point = 300000
-where u_id = 'Kjun'
+where u_id = 'Hong'
 select* from hk_user
 select * from hk_point where pt_id = 'test' order by pt_date
 

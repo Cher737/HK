@@ -209,7 +209,7 @@ public class UserDAO {
 	
 	public void divideMail(HttpServletRequest request) {
 		User u = (User) request.getSession().getAttribute("loginMember");
-		String[] mail = u.getU_mail().split("=");
+		String[] mail = u.getU_mail().split("@");
 		request.setAttribute("mail1", mail[0]);
 		request.setAttribute("mail2", mail[1]);
 	}

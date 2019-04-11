@@ -45,7 +45,6 @@ public class SpecialDAO {
 			List<Product> spdt = ss.getMapper(SpecialMapper.class).getTopProducts(pdn);
 			request.setAttribute("spdt", spdt);
 			
-			System.out.println("test");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
